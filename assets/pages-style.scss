@@ -1,0 +1,71 @@
+@import './variables';
+
+.headline {
+  font-weight: $h1-weight;
+  @include fluid-font(20rem, $h1-min-size, 3rem, 20, 70, 1.574, 3);
+  font-family: $h1-font;
+  line-height: 1em;
+  display: inline-block;
+}
+
+.sub-headline {
+  @include fluid-font(20rem, $h2-min-size, 3rem, 20, 70, 1.574, 1.7);
+  font-weight: $h2-weight;
+  font-family: $h2-font;
+}
+
+.body {
+  @include fluid-font(20rem, $p-min-size, 3rem, 20, 70, 1.574, 1.7);
+  font-family: $p-font;
+  max-width: 40ch;
+  margin: 0 auto;
+}
+
+
+
+.page-container {
+  text-align: center;
+
+}
+
+.bread-wrapper{
+  overflow: hidden;
+  margin: 40px 0;
+
+  //for enter animation the default position needs to be out of view
+}
+
+
+
+body {
+  overscroll-behavior: none;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+p,
+h1,
+h2,
+div,
+h3 {
+  color: $default-txt-color;
+  letter-spacing: $letter-spacing;
+}
+
+#header-wrapper {
+  padding: 6vh 0 13vh 0;
+}
+
+@media (max-width: 600px) {
+  #header-wrapper {
+    padding: 3vh 0 8vh 0;
+  }
+}
+
+// ---------------------- Component styles ---------------------------
+
+.sub-cmp-wrapper {
+  text-align: center;
+}

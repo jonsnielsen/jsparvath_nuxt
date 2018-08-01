@@ -1,0 +1,29 @@
+.exit {
+  & > .bread-element {
+    transform: translate3d(0, -110%, 0);
+  }
+}
+
+.outDown {
+  & > .bread-element {
+    transform: translate3d(0, 110%, 0);
+  }
+}
+
+.transition1 {
+  transition: transform 1s;
+}
+.transition2 {
+  transition: transform 0.5s 0.5s;
+}
+.transition3 {
+  transition: transform 0.25s 0.75s;
+}
+
+.layout-wrapper {
+  transition: background 1s;
+}
+
+body {
+  transition: background-color 1s;
+}
