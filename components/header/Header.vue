@@ -2,7 +2,7 @@
   <nav>
 
     <ul id="menu-ul">
-      <!--<div id="enclosing-div">-->
+      <div id="enclosing-div">
         <nuxt-link exact to="/">
           <li class="menu-item" >
             ABOUT
@@ -20,6 +20,8 @@
          CONTACT
           </li>
         </nuxt-link>
+      </div>
+
     </ul>
   </nav>
 </template>
