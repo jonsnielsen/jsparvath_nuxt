@@ -9,13 +9,13 @@
           </li>
         </nuxt-link>
 
-      <nuxt-link to="services">
+      <nuxt-link to="/services">
         <li class="menu-item">
           SERVICES
         </li>
       </nuxt-link>
 
-        <nuxt-link to="contact">
+        <nuxt-link to="/contact">
           <li class="menu-item">
          CONTACT
           </li>

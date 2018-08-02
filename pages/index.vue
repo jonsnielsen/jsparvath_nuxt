@@ -16,7 +16,7 @@
       </div>
 
       <div class="body-wrapper bread-wrapper" :class="{exit: exitRoute, outDown: outDown}">
-        <p class="body transition3 bread-element">
+        <p class="body-text transition3 bread-element">
           I help
           <span class="emphasized">individuals</span>,
           <span class="emphasized">startups</span> and
@@ -33,8 +33,7 @@
   import RouteTransition from '~/components/mixins/RouteTransitionMixin'
 
   export default {
-    mixins: [RouteTransition],
-    layout: 'about-bc'
+    mixins: [RouteTransition]
   }
 </script>
 

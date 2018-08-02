@@ -14,13 +14,18 @@
   font-family: $h2-font;
 }
 
-.body {
+.body-text {
   @include fluid-font(20rem, $p-min-size, 3rem, 20, 70, 1.574, 1.7);
   font-family: $p-font;
   max-width: 40ch;
   margin: 0 auto;
 }
 
+
+.break::before {
+  content: "\A";
+  white-space: pre;
+}
 
 
 .page-container {

@@ -2,17 +2,20 @@
   <div class="page-container">
     <section>
       <div class="headline-wrapper bread-wrapper" :class="{exit: exitRoute, outDown: outDown}">
-        <h1 class="headline transition1 bread-element">Contact</h1>
+        <h1 class="headline transition1 bread-element">Beyond...</h1>
       </div>
 
       <div class="sub-headline-wrapper bread-wrapper" :class="{exit: exitRoute, outDown: outDown}">
         <h2 class="sub-headline transition2 bread-element">
-          Drop me a line if you would like together, request a quote or just say hello
+          Mobile, Desktop and console applications
         </h2>
       </div>
 
       <div class="body-wrapper bread-wrapper" :class="{exit: exitRoute, outDown: outDown}">
-        <p class="body-text transition3 bread-element">hello@jsparvath.com</p>
+        <p class="body-text transition3 bread-element">
+          Say hello, and I can help you decide what technology best fits your project
+        </p>
+
       </div>
     </section>
 
