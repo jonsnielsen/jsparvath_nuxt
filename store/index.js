@@ -1,29 +1,32 @@
 import Vuex from 'vuex';
 
-const BC_COLORS = [
-  {path: '/', color: '#797988'},
-  {path: '/services', color: '#2A68FC'},
-  {path: '/services/other', color: '#F65742'},
-  {path: '/contact', color: '#000000'},
+const paths = [
+  {path: '/', color: '#797988', numberOfRoutes: 1},
+  {path: '/services', color: '#2A68FC', numberOfRoutes: 2, position: 1},
+  {path: '/services/other', color: '#F65742', numberOfRoutes: 2, position: 2},
+  {path: '/contact', color: '#000000', numberOfRoutes: 1},
 ];
 
-const createStore = {
+export default {
   state() {
     return {
       exitRoute: false,
-      currentBcColor: BC_COLORS[0].color
+      currentPath: paths[0],
+      allPaths: paths
     }
   },
   mutations: {
     setExitRoute(state, isExiting) {
       state.exitRoute = isExiting;
     },
-    changeBcColor(state, path) {
-      let newColor = BC_COLORS.find(obj => obj.path == path);
-      if (newColor) {
-        state.currentBcColor = newColor.color;
+    changePath(state, path) {
+      let newPath = paths.find(obj => obj.path == path);
+      if (newPath) {
+        state.currentPath = newPath;
       }
     }
+  },
+  getters: {
+    getAllPaths: state => state.allPaths
   }
 }
-export default createStore;

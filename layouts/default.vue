@@ -20,15 +20,15 @@
       }
     },
     computed: {
-      ...mapState(['currentBcColor'])
+      ...mapState(['currentPath'])
     },
     watch: {
-      currentBcColor(color) {
-        this.changeBcColor(color);
+      currentPath(path) {
+        this.changeBcColor(path.color);
       }
     },
     mounted() {
-      this.changeBcColor(this.currentBcColor);
+      this.changeBcColor(this.currentPath.color);
     }
 
 
