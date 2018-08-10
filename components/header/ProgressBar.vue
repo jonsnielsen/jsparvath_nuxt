@@ -1,6 +1,5 @@
 <template>
-  <div id="progressbar">
-    <!--<p>{{progressBarData}}</p>-->
+  <div id="progressbar" :style="progressBarData">
 
 
   </div>
@@ -16,13 +15,12 @@
 
 <style lang="scss">
   #progressbar {
-    height: 0.5px;
+    height: 4.5px;
     //background-color: $progressbar-color;
-    background-color: #ff0000;
+    background-color: #fff;
     position: relative;
+    transition: all .75s cubic-bezier(0.7, 0.11, 0.51, 1.21);
   }
 
-  .animated {
-    transition: width 0.4s, left 0.4s;
-  }
+
 </style>

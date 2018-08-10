@@ -22,7 +22,7 @@
         </nuxt-link>
       </div>
 
-      <!--<ProgressBar :progressBarData="menuItems"></ProgressBar>-->
+      <ProgressBar :progressBarData="progressBarData"></ProgressBar>
 
     </ul>
   </nav>
@@ -32,6 +32,22 @@
   import ProgressBar from './ProgressBar.vue'
   import {mapState} from 'vuex';
 
+  function prepareItemData(item, allPathsData) {
+    let menuItemWidth = item.clientWidth;
+    let offsetLeft = item.offsetLeft;
+    let path = item.path;
+    let pathData = allPathsData[path];
+
+    let numberOfRoutes = pathData.numberOfRoutes;
+    let barWidth = menuItemWidth / numberOfRoutes;
+
+    return {
+      barWidth,
+      offsetLeft,
+      path
+    }
+  }
+
   export default {
     components: {
       ProgressBar
@@ -40,54 +56,75 @@
       return {
         menuItems: [],
         menuItemsData: [],
-        progressBarData: {},
+        progressBarData: {width: '0px', left: '0px'}
       }
     },
     computed: {
-      ...mapState(['allPaths'])
+      ...mapState(['allPathsData', 'currentPath'])
+    },
+    watch: {
+      currentPath(currentPathObj) {
+        let progressBarData = this.determineProgressBarData(currentPathObj, this.menuItemsData);
+        this.setProgressBarData(progressBarData)
+      }
     },
     methods: {
-      updateMenuItemsData() {
-        let allPaths = this.allPaths;
-        let miData = this.menuItemsData;
+      determineMenuItemsData(allPathsData, menuItems) {
+        let itemData = [];
+        menuItems.forEach((item) => {
+          let updatedItem = prepareItemData(item, allPathsData);
+          itemData.push(updatedItem);
+        });
+        return itemData;
+      },
+      determineProgressBarData(currentPathObj, menuItemsData,) {
+        let routePosition = currentPathObj['position'];
+        let pathObj = menuItemsData.find(p => p.path === currentPathObj.path);
+        let width = pathObj.barWidth;
+        let offsetLeft = pathObj.offsetLeft + width * (routePosition - 1);
+        return {
+          width: width + 'px',
+          left: offsetLeft + 'px'
+        }
+      },
+      setProgressBarData(progressBarData) {
+        this.$nextTick(() => {
+          this.progressBarData = progressBarData
 
-        this.menuItems.forEach((item, index) => {
-          let menuItemWidth = item.clientWidth;
-          let offsetLeft = item.offsetLeft;
-          let path = item.getAttribute('href');
-          let pathObj = allPaths.find(p => p.path === path);
-          if (!pathObj) {
-            console.error(pathObj);
-            return;
-          }
-          let numberOfRoutes = pathObj.numberOfRoutes;
-          let barWidth = menuItemWidth / numberOfRoutes;
-
-          miData[index]
         })
       },
-      updateProgressBarData() {
-        let currentPath = this.$store.state.currentPath;
-        let numberOfRoutes = currentPath['numberOfRoutes'];
-        let routePosition = currentPath['position'];
-        this.menuItemsData = [];
-        this.menuItems.forEach((item, index) => {
-          let menuItemWidth = item.clientWidth;
-          let offsetLeft = item.offsetLeft;
-          let barWidth = menuItemWidth / numberOfRoutes;
-          if (routePosition) {
-            offsetLeft = offsetLeft + barWidth * (routePosition - 1)
-          }
+      setMenuItemsData(menuItemsData) {
 
-          // let childRoutesLength =
-        })
+        this.menuItemsData = menuItemsData;
+
+
       }
     },
     mounted() {
-      this.menuItems = document.querySelectorAll('.nl');
-      this.menuItemsData = Array(this.menuItems.length);
-      this.updateProgressBarData();
-      this.updateMenuItemsData();
+      let linkItems = document.querySelectorAll('.nl');
+
+      //setup the menuitems array
+      let menuItems = [...linkItems].map(item => {
+        let child = item.children[0]
+        child.path = item.getAttribute('href');
+        return child;
+      });
+      this.menuItems = menuItems;
+
+      let menuItemsData = this.determineMenuItemsData(this.allPathsData, this.menuItems);
+      this.menuItemsData = menuItemsData;
+
+      let progressBarData = this.determineProgressBarData(this.currentPath, this.menuItemsData);
+      this.progressBarData = progressBarData;
+
+
+      window.addEventListener("resize", () => {
+        menuItemsData = this.determineMenuItemsData(this.allPathsData, this.menuItems);
+        this.setMenuItemsData(menuItemsData);
+
+        progressBarData = this.determineProgressBarData(this.currentPath, this.menuItemsData);
+        this.setProgressBarData(progressBarData);
+      });
     }
   }
 </script>

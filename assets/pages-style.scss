@@ -21,6 +21,9 @@
   margin: 0 auto;
 }
 
+.emphasized {
+  font-weight: $emphasized;
+}
 
 .break::before {
   content: "\A";
@@ -59,9 +62,6 @@ h3 {
   letter-spacing: $letter-spacing;
 }
 
-#header-wrapper {
-  padding: 6vh 0 13vh 0;
-}
 
 @media (max-width: 600px) {
   #header-wrapper {

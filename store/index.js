@@ -1,18 +1,18 @@
 import Vuex from 'vuex';
 
-const paths = [
-  {path: '/', color: '#797988', numberOfRoutes: 1},
-  {path: '/services', color: '#2A68FC', numberOfRoutes: 2, position: 1},
-  {path: '/services/other', color: '#F65742', numberOfRoutes: 2, position: 2},
-  {path: '/contact', color: '#000000', numberOfRoutes: 1},
-];
+const paths = {
+  '/': {color: '#797988', numberOfRoutes: 1, position: 1, path: '/'},
+  '/services': {color: '#F65742', numberOfRoutes: 1, position: 1, path: '/services'},
+  '/services/other': {color: '#2A68FC', numberOfRoutes: 2, position: 2, path: '/services/other'},
+  '/contact': {color: '#000000', numberOfRoutes: 1, position: 1, path: '/contact'}
+}
 
 export default {
   state() {
     return {
       exitRoute: false,
       currentPath: paths[0],
-      allPaths: paths
+      allPathsData: paths
     }
   },
   mutations: {
@@ -20,7 +20,7 @@ export default {
       state.exitRoute = isExiting;
     },
     changePath(state, path) {
-      let newPath = paths.find(obj => obj.path == path);
+      let newPath = paths[path];
       if (newPath) {
         state.currentPath = newPath;
       }
@@ -28,5 +28,5 @@ export default {
   },
   getters: {
     getAllPaths: state => state.allPaths
-  }
+}
 }

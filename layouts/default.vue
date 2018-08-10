@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Header></Header>
+    <div id="header-wrapper">
+      <Header></Header>
+    </div>
     <nuxt/>
   </div>
 </template>
@@ -36,7 +38,9 @@
 
 </script>
 
-<style>
-
+<style scoped>
+  #header-wrapper {
+    padding: 6vh 0 10vh 0;
+  }
 </style>
 

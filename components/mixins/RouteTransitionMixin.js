@@ -10,10 +10,8 @@ export default {
     ...mapState(['exitRoute'])
   },
   mounted(){
-    console.log('from mixin');
-    setTimeout(()=>{
+    setTimeout(() => {
       this.outDown = false;
     }, 10)
-
   }
 }
