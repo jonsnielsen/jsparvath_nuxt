@@ -2,7 +2,6 @@
   <nav>
 
     <ul id="menu-ul">
-      <div id="enclosing-div">
         <nuxt-link class="nl" exact to="/">
           <li class="menu-item">
             ABOUT
@@ -20,11 +19,10 @@
             CONTACT
           </li>
         </nuxt-link>
-      </div>
-
-      <ProgressBar :progressBarData="progressBarData"></ProgressBar>
-
     </ul>
+    <ProgressBar :progressBarData="progressBarData"></ProgressBar>
+
+    <Scroller></Scroller>
   </nav>
 </template>
 
@@ -32,12 +30,13 @@
   import ProgressBar from './ProgressBar.vue'
   import {mapState} from 'vuex';
 
+  import Scroller from '../scroller/Scroller.vue'
+
   function prepareItemData(item, allPathsData) {
     let menuItemWidth = item.clientWidth;
     let offsetLeft = item.offsetLeft;
     let path = item.path;
     let pathData = allPathsData[path];
-
     let numberOfRoutes = pathData.numberOfRoutes;
     let barWidth = menuItemWidth / numberOfRoutes;
 
@@ -50,7 +49,8 @@
 
   export default {
     components: {
-      ProgressBar
+      ProgressBar,
+      Scroller
     },
     data() {
       return {
@@ -60,10 +60,10 @@
       }
     },
     computed: {
-      ...mapState(['allPathsData', 'currentPath'])
+      ...mapState(['allPathsData', 'currentPathData'])
     },
     watch: {
-      currentPath(currentPathObj) {
+      currentPathData(currentPathObj) {
         let progressBarData = this.determineProgressBarData(currentPathObj, this.menuItemsData);
         this.setProgressBarData(progressBarData)
       }
@@ -78,8 +78,24 @@
         return itemData;
       },
       determineProgressBarData(currentPathObj, menuItemsData,) {
+        let basePath = currentPathObj.path;
         let routePosition = currentPathObj['position'];
-        let pathObj = menuItemsData.find(p => p.path === currentPathObj.path);
+
+        if(routePosition !== 1){
+          console.log('not ');
+          for (let path in this.allPathsData) {
+            let pathData = this.allPathsData[path];
+            if(pathData['position'] === 1){
+              basePath = path;
+            }
+            else if(currentPathObj.path === path){
+              break;
+            }
+          }
+
+        }
+
+        let pathObj = menuItemsData.find(p => p.path === basePath);
         let width = pathObj.barWidth;
         let offsetLeft = pathObj.offsetLeft + width * (routePosition - 1);
         return {
@@ -90,23 +106,19 @@
       setProgressBarData(progressBarData) {
         this.$nextTick(() => {
           this.progressBarData = progressBarData
-
         })
       },
       setMenuItemsData(menuItemsData) {
-
         this.menuItemsData = menuItemsData;
-
-
       }
     },
     mounted() {
       let linkItems = document.querySelectorAll('.nl');
-
       //setup the menuitems array
       let menuItems = [...linkItems].map(item => {
         let child = item.children[0]
         child.path = item.getAttribute('href');
+        console.log('child.path: ' + child.path);
         return child;
       });
       this.menuItems = menuItems;
@@ -114,7 +126,7 @@
       let menuItemsData = this.determineMenuItemsData(this.allPathsData, this.menuItems);
       this.menuItemsData = menuItemsData;
 
-      let progressBarData = this.determineProgressBarData(this.currentPath, this.menuItemsData);
+      let progressBarData = this.determineProgressBarData(this.currentPathData, this.menuItemsData);
       this.progressBarData = progressBarData;
 
 
@@ -122,7 +134,7 @@
         menuItemsData = this.determineMenuItemsData(this.allPathsData, this.menuItems);
         this.setMenuItemsData(menuItemsData);
 
-        progressBarData = this.determineProgressBarData(this.currentPath, this.menuItemsData);
+        progressBarData = this.determineProgressBarData(this.currentPathData, this.menuItemsData);
         this.setProgressBarData(progressBarData);
       });
     }
@@ -134,13 +146,9 @@
 
   #menu-ul {
     padding: 0;
+    margin: 0;
     width: 100%;
     text-align: center;
-  }
-
-  #enclosing-div {
-    margin: 0 auto;
-    max-width: 400px;
   }
 
   .menu-item {
@@ -153,6 +161,6 @@
     text-decoration: none;
     margin: 0 7.4%;
     cursor: pointer;
-
   }
+
 </style>

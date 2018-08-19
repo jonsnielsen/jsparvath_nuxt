@@ -1,10 +1,5 @@
 <template>
-  <div id="progressbar" :style="progressBarData">
-
-
-  </div>
-  <!--:style="progressBarData"-->
-
+  <div id="progressbar" :style="progressBarData"></div>
 </template>
 
 <script>
