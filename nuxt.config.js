@@ -38,7 +38,7 @@ module.exports = {
   */
   plugins: [
     '~/plugins/scroller-plugin',
-    '~/plugins/polyfills.js'
+    { src: '~/plugins/polyfills.js', ssr: false }
   ],
 
   /*
