@@ -38,23 +38,31 @@ h3 {
 
 // ---------------------- Component styles ---------------------------
 
+#header-wrapper {
+  padding: 8vh 0 15vh 0;
+}
+
 .headline {
   font-weight: $h1-weight;
-  @include fluid-font(20rem, $h1-min-size, 3rem, 20, 70, 1.574, 3);
+  @include fluid-font2(400px, 1200px,  $h1-min-size, $h1-max-size);
   font-family: $h1-font;
   line-height: 1em;
   display: inline-block;
+
+
 }
 
 .sub-headline {
-  @include fluid-font(20rem, $h2-min-size, 3rem, 20, 70, 1.574, 1.7);
+  // @include fluid-font2(400px, 1200px,  $h2-min-size, $h2-max-size);
+  font-size: $h2-font-size;
   font-weight: $h2-weight;
   font-family: $h2-font;
   margin: 3.5em 0 2.5em 0;
 }
 
 .body-text {
-  @include fluid-font(20rem, $p-min-size, 3rem, 20, 70, 1.574, 1.7);
+  // @include fluid-font(20rem, $p-min-size, 3rem, 20, 70, 1.574, 1.7);
+  font-size: $p-font-size;
   font-family: $p-font;
   max-width: 40ch;
   margin: 0 auto;
@@ -63,3 +71,11 @@ h3 {
 .emphasized {
   font-weight: $emphasized;
 }
+
+
+@media (max-width: 400px) {
+  #header-wrapper {
+    padding: 5vh 0 10vh 0;
+  }
+}
+

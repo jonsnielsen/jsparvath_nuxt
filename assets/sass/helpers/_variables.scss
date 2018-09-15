@@ -13,18 +13,26 @@ $contact-bc-color: #000000;
 /* --------------- FONTS ------------------ */
 $headline-font: "Eczar", serif;
 $body-font: "Work Sans", sans-serif;
-$body-max-size: 1.7;
-$body-min-size: 0.7rem;
+$body-size: 15px;
 $letter-spacing: 1px;
-$h1-min-size: 2.574rem;
+
+$h1-min-size: 47px;
+$h1-max-size: 75.5px;
+
+
 $h1-weight: 400;
 $h1-font: $headline-font;
-$h2-min-size: $body-min-size;
+
+// $h2-min-size: 15px;
+// $h2-max-size: 15px;
+$h2-font-size: $body-size; 
 $h2-weight: 100;
 $h2-font: $body-font;
+
 $p-font: $body-font;
-$p-max-size: $body-max-size;
-$p-min-size: $body-min-size;
+// $p-max-size: $body-max-size;
+// $p-min-size: $body-min-size;
+$p-font-size: $body-size;
 $menu-item-weight: 0;
 $menu-item-font: $body-font;
 $menu-item-size: 0.7em;

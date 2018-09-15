@@ -37,7 +37,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/scroller-plugin'
+    '~/plugins/scroller-plugin',
+    '~/plugins/polyfills.js'
   ],
 
   /*

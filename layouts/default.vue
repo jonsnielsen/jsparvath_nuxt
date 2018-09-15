@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import {mapState} from 'vuex'
+  import { mapState } from 'vuex'
   import Header from '~/components/header/Header.vue'
 
 
@@ -39,8 +39,4 @@
 </script>
 
 <style scoped>
-  #header-wrapper {
-    padding: 8vh 0 15vh 0;
-  }
 </style>
-
