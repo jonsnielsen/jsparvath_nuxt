@@ -58,6 +58,11 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    postcss: [
+      require('autoprefixer')({
+        browsers: ['> 5%']
+      })
+    ]
   },
   router: {
     middleware: 'pages'
