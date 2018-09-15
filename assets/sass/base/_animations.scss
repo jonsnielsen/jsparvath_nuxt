@@ -1,0 +1,45 @@
+$anim-dur: .4s;
+$anim-delay: 0.2s;
+$_between-change-route: 0.3s;
+$_anim-delay-dur: $anim-dur + 2 * $anim-delay;
+$_change-route-delay: $_anim-delay-dur + $_between-change-route;
+
+$total: $_change-route-delay + $_anim-delay-dur;
+$bc-dur: $total;
+
+$exit-enter-distance: 50px;
+
+:export {
+  changeRouteDelay: $_change-route-delay;
+}
+
+
+.active {
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+
+.transition1 {
+  transition: all $anim-dur 0s ease-in-out;
+}
+.transition2 {
+  transition: all $anim-dur $anim-delay ease-in-out;
+
+}
+.transition3 {
+  transition: all $anim-dur ($anim-delay * 2) ease-in-out;
+}
+
+
+.exit {
+    transform: translate3d(0, -$exit-enter-distance, 0);
+    opacity: 0;
+  }
+.outDown {
+    transform: translate3d(0, $exit-enter-distance, 0);
+    opacity: 0;
+}
+
+body {
+  transition: background-color $bc-dur;
+}

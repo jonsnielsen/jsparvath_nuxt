@@ -142,7 +142,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/variables.scss";
 
   #menu-ul {
     padding: 0;

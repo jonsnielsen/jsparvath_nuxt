@@ -1,5 +1,3 @@
-@import './variables';
-
 .headline {
   font-weight: $h1-weight;
   @include fluid-font(20rem, $h1-min-size, 3rem, 20, 70, 1.574, 3);
@@ -37,12 +35,12 @@
 
 }
 
-.bread-wrapper{
-  overflow: hidden;
-  margin: 40px 0;
+//.bread-wrapper{
+//  overflow: visible;
+//  margin: 40px 0;
 
   //for enter animation the default position needs to be out of view
-}
+//}
 
 
 

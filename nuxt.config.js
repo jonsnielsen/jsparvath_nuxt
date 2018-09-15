@@ -1,5 +1,6 @@
 const pkg = require('./package')
 
+
 module.exports = {
   mode: 'universaln',
 
@@ -9,14 +10,14 @@ module.exports = {
   head: {
     title: pkg.name,
     meta: [
-      {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: pkg.description}
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-      {rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Eczar:400,800"},
-      {rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Work+Sans"}
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Eczar:400,800" },
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Work+Sans" }
     ]
   },
 
@@ -29,8 +30,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/main.scss',
-    '~/assets/normalize.css'
+    { src: '~/assets/sass/main.scss', lang: 'sass' }
   ],
 
   /*
@@ -43,7 +43,13 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [],
+  modules: [
+    [
+      'nuxt-sass-resources-loader', [
+        '~assets/sass/helpers/_1-helpers.scss'
+      ]
+    ]
+  ],
 
   /*
   ** Build configuration
