@@ -8,6 +8,7 @@
 .page-container {
   text-align: center;
   margin: 0 10%;
+  // background-color: blue;
 
 }
 
@@ -44,7 +45,7 @@ h3 {
 
 .headline {
   font-weight: $h1-weight;
-  @include fluid-font2(400px, 1200px,  $h1-min-size, $h1-max-size);
+  @include fluid-font2(300px, 1200px,  $h1-min-size, $h1-max-size);
   font-family: $h1-font;
   line-height: 1em;
   display: inline-block;
@@ -75,7 +76,8 @@ h3 {
 
 @media (max-width: 400px) {
   #header-wrapper {
-    padding: 5vh 0 10vh 0;
+    // padding: 8vh 0 10vh 0;
+    // background-color: yellow;
   }
 }
 
