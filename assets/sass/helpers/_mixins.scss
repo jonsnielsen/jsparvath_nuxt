@@ -1,0 +1,15 @@
+@mixin fluid-font(
+  $min-screen-px,
+  $min-font-px,
+  $max-font-px,
+  $min-screen,
+  $max-screen,
+  $min-font,
+  $max-font
+) {
+  font-size: calc(
+    #{$min-font-px} + (#{$max-font} - #{$min-font}) * (
+    100vw - #{$min-screen-px}
+    ) / (#{$max-screen} - #{$min-screen})
+  );
+}

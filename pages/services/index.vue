@@ -2,25 +2,23 @@
   <div class="page-container">
     <section>
       <!--<div class="headline-wrapper bread-wrapper">-->
-        <h1 class="headline transition1 bread-element" :class="{exit: exitRoute, outDown: outDown}">Web
-          <span class="break">Developement</span>
-        </h1>
-
+      <h1 class="headline transition1 bread-element emphasized" :class="{exit: exitRoute, outDown: outDown}">Web
+        <span class="break">Developement</span>
+      </h1>
       <!--</div>-->
 
-      <!--<div class="sub-headline-wrapper bread-wrapper">-->
-        <h2 class="sub-headline transition2 bread-element" :class="{exit: exitRoute, outDown: outDown}">
-          e-commerce, blogs,
-          <span class="emphasized">CMS, PWA, SPA</span>
-          <span class="break">-and other acronyms</span>
-        </h2>
+      <!--<div class=" sub-headline-wrapper bread-wrapper ">-->
+      <h2 class="sub-headline transition2 bread-element " :class="{exit: exitRoute, outDown: outDown} ">
+        E-commerce, blogs,
+        <span class="emphasized ">CMS, PWA, SPA</span>
+        <span class="break ">-and other acronyms</span>
+      </h2>
       <!--</div>-->
 
-      <!--<div class="body-wrapper bread-wrapper" :class="{exit: exitRoute, outDown: outDown}">-->
-        <p class="body-text transition3 bread-element" :class="{exit: exitRoute, outDown: outDown}">
-          I do both front- and back-end on small-large applications,
-          specializing in optimal performance and short loading times
-        </p>
+      <!--<div class="body-wrapper bread-wrapper " :class="{exit: exitRoute, outDown: outDown} ">-->
+      <p class="body-text transition3 bread-element " :class="{exit: exitRoute, outDown: outDown} ">
+        I do both front- and back-end on small-large applications, specializing in optimal performance and short loading times
+      </p>
 
       <!--</div>-->
     </section>
@@ -36,4 +34,3 @@
     mixins: [RouteTransition]
   }
 </script>
-

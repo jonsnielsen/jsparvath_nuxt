@@ -2,23 +2,23 @@
   <nav>
 
     <ul id="menu-ul">
-        <nuxt-link class="nl" exact to="/">
-          <li class="menu-item">
-            ABOUT
-          </li>
-        </nuxt-link>
+      <nuxt-link class="nl" exact to="/">
+        <li class="menu-item">
+          ABOUT
+        </li>
+      </nuxt-link>
 
-        <nuxt-link class="nl" to="/services">
-          <li class="menu-item">
-            SERVICES
-          </li>
-        </nuxt-link>
+      <nuxt-link class="nl" to="/services">
+        <li class="menu-item">
+          SERVICES
+        </li>
+      </nuxt-link>
 
-        <nuxt-link class="nl" to="/contact">
-          <li class="menu-item">
-            CONTACT
-          </li>
-        </nuxt-link>
+      <nuxt-link class="nl" to="/contact">
+        <li class="menu-item">
+          CONTACT
+        </li>
+      </nuxt-link>
     </ul>
     <ProgressBar :progressBarData="progressBarData"></ProgressBar>
 
@@ -28,7 +28,7 @@
 
 <script>
   import ProgressBar from './ProgressBar.vue'
-  import {mapState} from 'vuex';
+  import { mapState } from 'vuex';
 
   import Scroller from '../scroller/Scroller.vue'
 
@@ -56,7 +56,7 @@
       return {
         menuItems: [],
         menuItemsData: [],
-        progressBarData: {width: '0px', left: '0px'}
+        progressBarData: { width: '0px', left: '0px' }
       }
     },
     computed: {
@@ -77,18 +77,18 @@
         });
         return itemData;
       },
-      determineProgressBarData(currentPathObj, menuItemsData,) {
+      determineProgressBarData(currentPathObj, menuItemsData, ) {
         let basePath = currentPathObj.path;
         let routePosition = currentPathObj['position'];
 
-        if(routePosition !== 1){
+        if (routePosition !== 1) {
           console.log('not ');
           for (let path in this.allPathsData) {
             let pathData = this.allPathsData[path];
-            if(pathData['position'] === 1){
+            if (pathData['position'] === 1) {
               basePath = path;
             }
-            else if(currentPathObj.path === path){
+            else if (currentPathObj.path === path) {
               break;
             }
           }
@@ -142,24 +142,21 @@
 </script>
 
 <style lang="scss" scoped>
-
   #menu-ul {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 3px auto;
+    padding: 0 2rem;
+    list-style-type: none;
   }
 
-  .menu-item {
-    color: $menu-item-color;
+  .nl {
     font-size: $menu-item-size;
-    font-weight: $menu-item-weight;
-    font-family: $menu-item-font;
-
-    display: inline-block;
     text-decoration: none;
-    margin: 0 7.4%;
+
+    margin-left: 0 !important;
+    padding: 0 !important;
     cursor: pointer;
   }
-
 </style>

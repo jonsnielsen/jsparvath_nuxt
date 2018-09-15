@@ -20,14 +20,17 @@ $exit-enter-distance: 50px;
 }
 
 .transition1 {
-  transition: all $anim-dur 0s ease-in-out;
+  transition: opacity $anim-dur ease-in-out,
+              transform $anim-dur ease-in-out;
 }
 .transition2 {
-  transition: all $anim-dur $anim-delay ease-in-out;
+  transition: opacity $anim-dur $anim-delay ease-in-out,
+              transform $anim-dur $anim-delay ease-in-out;
 
 }
 .transition3 {
-  transition: all $anim-dur ($anim-delay * 2) ease-in-out;
+  transition: opacity $anim-dur ($anim-delay * 2) ease-in-out,
+              transform $anim-dur ($anim-delay * 2) ease-in-out;
 }
 
 

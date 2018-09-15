@@ -40,7 +40,7 @@
 
 <style scoped>
   #header-wrapper {
-    padding: 6vh 0 10vh 0;
+    padding: 8vh 0 15vh 0;
   }
 </style>
 
