@@ -17,17 +17,35 @@
 
 main {
   display: flex;
-  // max-width: 700px;
-  // margin: 0 auto;
-
 }
 
+section.content {
+// background-color: red;
+}
+
+#arrow {
+  width: 40px;
+  height: 100px;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  main {
+    flex-direction: column;
+  }
+  section.content {
+    margin-left: 50px;
+  }
+}
 body {
-  overscroll-behavior: none;
+  overscroll-behavior: none none;
   position: fixed;
   overflow: hidden;
   width: 100%;
   height: 100%;
+  letter-spacing: .1em;
+  font-family: $body-font;
+
+
 }
 
 p,
@@ -44,9 +62,19 @@ div
   padding:0;
 }
 
+p {
+  margin-bottom: 1em;
+}
+
 h1 {
   // background-color: yellow;
   display: inline-block;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  font-weight: $h2-weight;
+  font-family: $h2-font;
 }
 
 ul {
@@ -60,37 +88,40 @@ li {
   padding: 0;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    // list-style-type: none;
+}
+
 // ---------------------- Component styles ---------------------------
 
 .headline {
   font-weight: $h1-weight;
-  @include fluid-font2(300px, 1200px,  $h1-min-size, $h1-max-size);
+  @include fluid-font2(300px, 1400px,  $h1-min-size, $h1-max-size);
   font-family: $h1-font;
-  line-height: 1em;
+  line-height: .8em;
+  // background-color: grey;
+  margin-right: 20%;
   display: inline-block;
 
 
 }
 
-.sub-headline {
-  // @include fluid-font2(400px, 1200px,  $h2-min-size, $h2-max-size);
-  font-size: $h2-font-size;
-  font-weight: $h2-weight;
-  font-family: $h2-font;
-  margin: 3.5em 0 2.5em 0;
-}
 
 .body-text {
-  // @include fluid-font(20rem, $p-min-size, 3rem, 20, 70, 1.574, 1.7);
   font-size: $p-font-size;
-  font-family: $p-font;
-  max-width: 40ch;
-  margin: 0 auto;
+  line-height: 2em;
+  letter-spacing: .1em;
 }
 
 .emphasized {
   font-weight: $emphasized;
 }
+
+
 
 
 

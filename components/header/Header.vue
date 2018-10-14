@@ -32,9 +32,22 @@
 
   import Scroller from '../scroller/Scroller.vue'
 
+  function cumulativeOffset(element) {
+    var left = element.offsetLeft;
+    //hackerman!
+    let wrapper = document.querySelector("#layout-wrapper");
+    let padding = window.getComputedStyle(wrapper, null).getPropertyValue("padding-left") || 0;
+    padding = parseInt(padding);
+
+    left -= padding
+    return left
+  };
   function prepareItemData(item, allPathsData) {
     let menuItemWidth = item.clientWidth;
-    let offsetLeft = item.offsetLeft;
+    let offsetLeft = cumulativeOffset(item);
+    // let offsetLeft = item.getBoundingClientRect().left;
+    // (item).left;
+    // offsetLeft += item.offsetLeft;
     let path = item.path;
     let pathData = allPathsData[path];
     let numberOfRoutes = pathData.numberOfRoutes;
@@ -147,7 +160,7 @@
     justify-content: space-between;
     max-width: 300px;
     /* margin: 3px auto; */
-    /* margin: 0 0 0 5%; */
+    margin: 0 0 20px 0;
     /* padding: 0 2rem; */
     list-style-type: none;
   }

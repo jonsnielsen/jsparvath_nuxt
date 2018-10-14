@@ -15,7 +15,7 @@
         </div>
 
         <div class="item-group transition3 bread-element " :class="{exit: exitRoute, outDown: outDown}">
-          <p class="year">11 / 2017 - 04 / 2018</p>
+          <p>11 / 2017 - 04 / 2018</p>
           <h2>Back-end consultant, Kraftvaerk</h2>
           <p>
             I Primarily worked with C#/.NET and Umbraco as CMS,but also worked on things as: GDPR compliance, web

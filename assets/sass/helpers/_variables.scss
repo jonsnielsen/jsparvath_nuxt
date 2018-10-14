@@ -13,12 +13,13 @@ $contact-bc-color: #000000;
 /* --------------- FONTS ------------------ */
 
 $headline-font: 'Poppins', serif;
-$body-font: "Poppins", sans-serif;
-$body-size: 15px;
+$body-font: $headline-font;
+
+$body-size: 10px;
 $letter-spacing: 1px;
 
-$h1-min-size: 35px;
-$h1-max-size: 75.5px;
+$h1-min-size: 55px;
+$h1-max-size: 110px;
 
 
 $h1-weight: 400;
@@ -27,19 +28,24 @@ $h1-font: $headline-font;
 // $h2-min-size: 15px;
 // $h2-max-size: 15px;
 $h2-font-size: $body-size; 
-$h2-weight: 100;
+$h2-weight: 900;
 $h2-font: $body-font;
 
 $p-font: $body-font;
-// $p-max-size: $body-max-size;
-// $p-min-size: $body-min-size;
 $p-font-size: $body-size;
+
+
 $menu-item-weight: 0;
 $menu-item-font: $body-font;
 $menu-item-size: 0.7em;
-// $menu-item-letter-spacing: 1px;
 $emphasized: 800;
+
+
+$footer-item-font: $body-font;
+$footer-item-font-size: 0.5em;
 /* --------------- ANIMATIONS----------------- */
 // $time-progressbar:
 
 /* --------------- OTHER ----------------- */
+
+$breakpoint-mobile: 600px;

@@ -4,17 +4,20 @@
       <Header></Header>
     </div>
     <nuxt />
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
   import { mapState } from 'vuex'
   import Header from '~/components/header/Header.vue'
+  import Footer from '~/components/footer/Footer.vue'
 
 
   export default {
     components: {
-      Header
+      Header,
+      Footer
     },
     methods: {
       changeBcColor(color) {
@@ -38,16 +41,23 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   #header-wrapper {
-    padding: 8vh 0 15vh 0;
+    padding: 8vh 0 26vh 0;
     /* background-color: violet; */
   }
 
   #layout-wrapper {
-    max-width: 1000px;
-    background-color: blue;
+    max-width: 1200px;
+    padding: 0 50px;
+    /* background-color: blue; */
     margin: 0 auto;
     position: relative;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    #header-wrapper {
+      padding: 6vh 0 12vh 0;
+    }
   }
 </style>
