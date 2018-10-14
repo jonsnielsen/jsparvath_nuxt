@@ -4,19 +4,19 @@
     <ul id="menu-ul">
       <nuxt-link class="nl" exact to="/">
         <li class="menu-item">
-          ABOUT
+          About
         </li>
       </nuxt-link>
 
-      <nuxt-link class="nl" to="/services">
+      <nuxt-link class="nl" to="/experience/skills">
         <li class="menu-item">
-          SERVICES
+          Skills & Experience
         </li>
       </nuxt-link>
 
       <nuxt-link class="nl" to="/contact">
         <li class="menu-item">
-          CONTACT
+          Contact
         </li>
       </nuxt-link>
     </ul>

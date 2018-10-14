@@ -6,7 +6,7 @@
 
 
 .page-container {
-  text-align: center;
+  text-align: left;
   margin: 0 10%;
   // background-color: blue;
 
@@ -28,6 +28,10 @@ div,
 h3 {
   color: $default-txt-color;
   letter-spacing: $letter-spacing;
+}
+
+li {
+  display: inline;
 }
 
 //
