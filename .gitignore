@@ -12,3 +12,7 @@ dist
 
 # IDE
 .idea
+
+.editorconfig
+
+.bash_history
