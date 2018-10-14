@@ -6,9 +6,19 @@
 
 
 .page-container {
-  text-align: left;
-  margin: 0 10%;
+  // text-align: left;
+  // margin: 0 10%;
   // background-color: blue;
+  // max-width: 900px;
+  // background-color: teal;
+  // margin: 0 auto;
+
+}
+
+main {
+  display: flex;
+  // max-width: 700px;
+  // margin: 0 auto;
 
 }
 
@@ -22,30 +32,35 @@ body {
 
 p,
 h1,
+h2,
+h3,
 a,
 h2,
-div,
-h3 {
+div
+ {
   color: $default-txt-color;
   letter-spacing: $letter-spacing;
+  margin:0;
+  padding:0;
 }
 
+h1 {
+  // background-color: yellow;
+  display: inline-block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 li {
-  display: inline;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
-
-//
-//@media (max-width: 600px) {
-//  #header-wrapper {
-//    padding: 3vh 0 8vh 0;
-//  }
-//}
 
 // ---------------------- Component styles ---------------------------
-
-#header-wrapper {
-  padding: 8vh 0 15vh 0;
-}
 
 .headline {
   font-weight: $h1-weight;
@@ -78,10 +93,4 @@ li {
 }
 
 
-@media (max-width: 400px) {
-  #header-wrapper {
-    // padding: 8vh 0 10vh 0;
-    // background-color: yellow;
-  }
-}
 

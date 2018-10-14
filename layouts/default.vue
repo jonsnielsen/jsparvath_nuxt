@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div id="layout-wrapper">
     <div id="header-wrapper">
       <Header></Header>
     </div>
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 
@@ -39,4 +39,15 @@
 </script>
 
 <style scoped>
+  #header-wrapper {
+    padding: 8vh 0 15vh 0;
+    /* background-color: violet; */
+  }
+
+  #layout-wrapper {
+    max-width: 1000px;
+    background-color: blue;
+    margin: 0 auto;
+    position: relative;
+  }
 </style>

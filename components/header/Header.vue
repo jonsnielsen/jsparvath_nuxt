@@ -146,17 +146,22 @@
     display: flex;
     justify-content: space-between;
     max-width: 300px;
-    margin: 3px auto;
-    padding: 0 2rem;
+    /* margin: 3px auto; */
+    /* margin: 0 0 0 5%; */
+    /* padding: 0 2rem; */
     list-style-type: none;
   }
 
   .nl {
     font-size: $menu-item-size;
     text-decoration: none;
-
-    margin-left: 0 !important;
-    padding: 0 !important;
     cursor: pointer;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .menu-item {
+    display: inline-block;
   }
 </style>
