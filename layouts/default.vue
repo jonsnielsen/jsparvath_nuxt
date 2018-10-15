@@ -4,7 +4,7 @@
       <Header></Header>
     </div>
     <nuxt />
-    <Footer></Footer>
+    <Footer id="footer"></Footer>
   </div>
 </template>
 
@@ -41,7 +41,7 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   #header-wrapper {
     padding: 8vh 0 26vh 0;
     /* background-color: violet; */
@@ -55,9 +55,23 @@
     position: relative;
   }
 
+  #footer {
+    /* background-color: #fff; */
+    position: fixed;
+    bottom: 50px;
+    /* background-color: blue; */
+  }
+
+
+
+
   @media (max-width: $breakpoint-mobile) {
     #header-wrapper {
       padding: 6vh 0 12vh 0;
+    }
+
+    #footer {
+      /* margin: 0 auto; */
     }
   }
 </style>

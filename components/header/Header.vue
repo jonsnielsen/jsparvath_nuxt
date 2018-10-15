@@ -177,4 +177,10 @@
   .menu-item {
     display: inline-block;
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    #menu-ul {
+      margin: 0 0 10px 0;
+    }
+  }
 </style>

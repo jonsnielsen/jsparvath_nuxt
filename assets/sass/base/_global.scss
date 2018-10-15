@@ -6,12 +6,6 @@
 
 
 .page-container {
-  // text-align: left;
-  // margin: 0 10%;
-  // background-color: blue;
-  // max-width: 900px;
-  // background-color: teal;
-  // margin: 0 auto;
 
 }
 
@@ -20,7 +14,6 @@ main {
 }
 
 section.content {
-// background-color: red;
 }
 
 #arrow {
@@ -33,7 +26,8 @@ section.content {
     flex-direction: column;
   }
   section.content {
-    margin-left: 50px;
+    // margin-left: 70px;
+    margin-top: 50px;
   }
 }
 body {
