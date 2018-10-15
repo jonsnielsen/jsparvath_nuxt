@@ -2,14 +2,14 @@
   <div class="page-container">
     <main>
 
-      <h1 class="headline transition1 bread-element" :class="{exit: exitRoute, outDown: outDown}">Contact</h1>
+      <h1 class="headline transition1" :class="{exit: exitRoute, outDown: outDown}">Contact</h1>
       <section class="content">
 
-        <h2 class="sub-headline transition2 bread-element" :class="{exit: exitRoute, outDown: outDown}">
+        <p class="transition2" :class="{exit: exitRoute, outDown: outDown}">
           Drop me a line if you would like together, request a quote or just say hello
-        </h2>
+        </p>
 
-        <p class="body-text transition3 bread-element" :class="{exit: exitRoute, outDown: outDown}">hello@jsparvath.com</p>
+        <p class="transition3" :class="{exit: exitRoute, outDown: outDown}">hello@jsparvath.com</p>
       </section>
     </main>
   </div>

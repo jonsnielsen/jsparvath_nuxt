@@ -31,7 +31,6 @@ section.content {
   }
 }
 body {
-  overscroll-behavior: none none;
   position: fixed;
   overflow: hidden;
   width: 100%;
@@ -57,7 +56,7 @@ div
 }
 
 p {
-  margin-bottom: 1em;
+  // margin-bottom: 1em;
 }
 
 h1 {
@@ -105,8 +104,9 @@ a {
 }
 
 
-.body-text {
+p, li {
   font-size: $p-font-size;
+  font-weight: 300;
   line-height: 2em;
   letter-spacing: .1em;
 }
@@ -115,6 +115,22 @@ a {
   font-weight: $emphasized;
 }
 
+.item-group {
+  margin-bottom: 20px;
+}
+
+.time-span {
+  // font-size: 10px;
+  margin: 0 0 5px 0;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.booold {
+  font-weight: 600;
+}
 
 
 

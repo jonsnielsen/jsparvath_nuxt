@@ -5,14 +5,13 @@
       <h1 class="headline transition1" :class="{exit: exitRoute, outDown: outDown}">About</h1>
       <section id="about-content" class="content">
 
-        <p class=" transition2 body-text" :class="{exit: exitRoute, outDown: outDown}">
-          <b>Hello!</b> <br>
-          I'm <b>Jonathan Sparvath</b>
-          a fullstack developer with emphasis on the backend, but I absolutely love working on the front end as well.
+        <p class=" transition2" :class="{exit: exitRoute, outDown: outDown}">
+       <span class="booold">Hello!</span> <br>
+       I'm <span class="booold">Jonathan Sparvath</span> a fullstack developer with emphasis on the backend, but I absolutely love working on the front end as well.
           Most of my free time is spent learning the newest shiny tool or framework, but I'm also a big proponent of
           learning the basics before moving on.
         </p>
-        <p class=" transition3 body-text" :class="{exit: exitRoute, outDown: outDown}">
+        <p class="transition3" :class="{exit: exitRoute, outDown: outDown}">
           I also have an interest in visual design that I exersize on personal projects.
           When I’m not in front of my computer, I love to play pingpong, enjoy the nightlife or travel the world.
         </p>
