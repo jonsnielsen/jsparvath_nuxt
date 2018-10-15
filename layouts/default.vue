@@ -72,6 +72,7 @@
 
     #footer {
       /* margin: 0 auto; */
+      display: none;
     }
   }
 </style>

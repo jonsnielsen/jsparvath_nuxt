@@ -10,7 +10,7 @@
 
 <style lang="scss">
   #progressbar {
-    height: 1px;
+    height: .7px;
     background-color: #fff;
     position: relative;
     transition: all .75s cubic-bezier(0.7, 0.11, 0.51, 1.21);

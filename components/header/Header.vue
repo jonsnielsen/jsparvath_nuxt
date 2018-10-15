@@ -158,9 +158,9 @@
   #menu-ul {
     display: flex;
     justify-content: space-between;
-    max-width: 300px;
+    max-width: 400px;
     /* margin: 3px auto; */
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
     /* padding: 0 2rem; */
     list-style-type: none;
   }
