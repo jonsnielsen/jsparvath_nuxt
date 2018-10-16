@@ -1,17 +1,18 @@
 import Vuex from 'vuex';
+import { log } from 'util';
 
 //position and numberOfRoutes are used in order to let the menubar know where it should be and the width
 const paths = {
-  '/': {color: '#000000', numberOfRoutes: 1, position: 1, path: '/'},
-  '/experience/skills': {color: '#272729', numberOfRoutes: 3, position: 1, path: '/experience/skills'},
-  '/experience/work': {color: '#272729', numberOfRoutes: 3, position: 2, path: '/experience/work'},
-  '/experience/studies': {color: '#272729', numberOfRoutes: 2, position: 3, path: '/experience/studies'},
-  '/contact': {color: '#4B4A4F', numberOfRoutes: 1, position: 1, path: '/contact'}
+  '/': { color: '#000000', numberOfRoutes: 1, position: 1 },
+  '/experience/skills': { color: '#272729', numberOfRoutes: 3, position: 1 },
+  '/experience/work': { color: '#272729', numberOfRoutes: 3, position: 2 },
+  '/experience/studies': { color: '#272729', numberOfRoutes: 2, position: 3 },
+  '/contact': { color: '#4B4A4F', numberOfRoutes: 1, position: 1 }
 };
-// paths['/'] = {color: '#797988', numberOfRoutes: 1, position: 1, path: '/'};
-// paths['/services'] = {color: '#F65742', numberOfRoutes: 1, position: 1, path: '/services'};
-// paths['/services/other'] = {color: '#2A68FC', numberOfRoutes: 2, position: 2, path: '/services/other'};
-// paths['/contact'] = {color: '#000000', numberOfRoutes: 1, position: 1, path: '/contact'};
+//add the path to the path object. not done in the object to avoid unnecessary duplication when adding path.
+for (let path in paths) {
+  paths[path].path = path;
+}
 
 export default {
   state() {
@@ -34,5 +35,5 @@ export default {
   },
   getters: {
     allPathsData: state => state.allPathsData
-}
+  }
 }

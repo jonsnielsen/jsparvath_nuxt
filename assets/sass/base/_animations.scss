@@ -42,9 +42,22 @@ $exit-enter-distance: 70px;
     transform: translate3d(0, -$exit-enter-distance, 0);
     opacity: 0;
   }
+.exitUp {
+    transform: translate3d(0, -$exit-enter-distance, 0);
+    opacity: 0;
+  }
+.exitDown {
+  transform: translate3d(0, $exit-enter-distance, 0);
+  opacity: 0;
+}
 .outDown {
     transform: translate3d(0, $exit-enter-distance, 0);
     opacity: 0;
+}
+
+.outUp {
+  transform: translate3d(0, -$exit-enter-distance,0);
+  opacity: 0;
 }
 
 body {

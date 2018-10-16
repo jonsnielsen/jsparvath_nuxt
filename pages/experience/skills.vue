@@ -7,7 +7,7 @@
 
       <section class="content">
 
-        <p class="transition2 item-group skills-teaser" :class="{exit: exitRoute, outDown: outDown}">
+        <p class="transition2 item-group skills-teaser" :class="{exit: exitRoute, outDown: outDown, outUp: outUp}">
           Some of the tools and languages that I have previously worked with:
         </p>
 
