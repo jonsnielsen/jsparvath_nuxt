@@ -2,11 +2,11 @@
   <div class="page-container">
     <main>
 
-      <h1 class="headline transition1 " :class="{exit: exitRoute, outDown: outDown}">Work</h1>
+      <h1 class="headline transition1 " :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">Work</h1>
 
       <section class="content">
 
-        <section class="item-group transition2 work-item-group" :class="{exit: exitRoute, outDown: outDown}">
+        <section class="item-group transition2 work-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">
           <p class="time-span">08 / 2018 - present</p>
           <h2>Freelance web developer, Danmarks Miljøportal (DMP)</h2>
           <p class="greyed">
@@ -15,7 +15,7 @@
           </p>
         </section>
 
-        <section class="item-group transition3 work-item-group" :class="{exit: exitRoute, outDown: outDown}">
+        <section class="item-group transition3 work-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">
           <p class="time-span">11 / 2017 - 04 / 2018</p>
           <h2>Back-end consultant, Kraftvaerk</h2>
           <p class="greyed">

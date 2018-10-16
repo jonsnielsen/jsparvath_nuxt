@@ -1,5 +1,5 @@
 <script>
-  import {mapState} from 'vuex';
+  import { mapState } from 'vuex';
   import ScrollHandler from "./scroller.js";
 
   export default {
@@ -18,12 +18,16 @@
 
         for (let path in allPathsData) {
           if (nextRoute) {
+            this.$store.dispatch('clearEnters')
+            this.$store.dispatch('exitUp');
             this.$router.push(path);
             return;
           }
           if (path === currentPath) {
             if (direction < 0) {
               if (previousPath) {
+                this.$store.dispatch('clearEnters')
+                this.$store.dispatch('exitDown');
                 this.$router.push(previousPath);
               }
               return;

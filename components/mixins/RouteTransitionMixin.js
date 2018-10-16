@@ -1,17 +1,20 @@
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   data() {
     return {
-      outDown: true,
+      // enterUp: true,
     }
   },
   computed: {
-    ...mapState(['exitRoute'])
+    ...mapState(['exitRoute', 'exitUp', 'exitDown', 'enterUp', 'enterDown', 'enterRoute'])
   },
-  mounted(){
+  mounted() {
+    this.$store.commit('setEnterRoute', true);
+
     setTimeout(() => {
-      this.outDown = false;
+      // this.$store.dispatch('clearEnters');
+      this.$store.commit('setEnterRoute', false);
     }, 10)
   }
 }

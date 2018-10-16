@@ -1,17 +1,17 @@
 <template>
   <div class="page-container">
     <main>
-      <h1 class="headline transition1" :class="{exit: exitRoute, outDown: outDown}">Skills
+      <h1 class="headline transition1" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">Skills
       </h1>
 
 
       <section class="content">
 
-        <p class="transition2 item-group skills-teaser" :class="{exit: exitRoute, outDown: outDown, outUp: outUp}">
+        <p class="transition2 item-group skills-teaser" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">
           Some of the tools and languages that I have previously worked with:
         </p>
 
-        <section class="item-group transition2 skills-item-group" :class="{exit: exitRoute, outDown: outDown}">
+        <section class="item-group transition3 skills-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">
           <h2>Front end:</h2>
           <ul>
             <li>HTML5,&nbsp;</li>
@@ -24,7 +24,7 @@
           </ul>
         </section>
 
-        <section class="item-group transition3 skills-item-group" :class="{exit: exitRoute, outDown: outDown}">
+        <section class="item-group transition4 skills-item-group" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,  enter: enterRoute}">
           <h2>Back end:</h2>
           <ul>
             <li>Node.js,&nbsp;</li>
@@ -37,7 +37,7 @@
           </ul>
         </section>
 
-        <section class="item-group transition4 skills-item-group" :class="{exit: exitRoute, outDown: outDown}">
+        <section class="item-group transition5 skills-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">
           <h2>Tools:</h2>
           <ul>
             <li>Git,&nbsp;</li>

@@ -18,6 +18,11 @@ export default {
   state() {
     return {
       exitRoute: false,
+      exitUp: false,
+      exitDown: false,
+      enterRoute: false,
+      enterUp: false,
+      enterDown: false,
       currentPathData: {},
       allPathsData: paths
     }
@@ -26,6 +31,21 @@ export default {
     setExitRoute(state, isExiting) {
       state.exitRoute = isExiting;
     },
+    setExitUp(state, isExitingUp) {
+      state.exitUp = isExitingUp;
+    },
+    setExitDown(state, isExitingDown) {
+      state.exitDown = isExitingDown;
+    },
+    setEnterRoute(state, isEntering) {
+      state.enterRoute = isEntering;
+    },
+    setEnterUp(state, isEnteringUp) {
+      state.enterUp = isEnteringUp;
+    },
+    setEnterDown(state, isEnteringDown) {
+      state.enterDown = isEnteringDown;
+    },
     changePath(state, path) {
       let newPath = paths[path];
       if (newPath) {
@@ -33,6 +53,28 @@ export default {
       }
     }
   },
+  actions: {
+    clearExits(context) {
+      context.commit('setExitRoute', false);
+      context.commit('setExitUp', false);
+      context.commit('setExitDown', false);
+    },
+    clearEnters(context) {
+      context.commit('setEnterRoute', false);
+      context.commit('setEnterUp', false);
+      context.commit('setEnterDown', false);
+    },
+    exitUp(context) {
+      context.commit('setExitUp', true);
+      context.commit('setEnterUp', true);
+    },
+    exitDown(context) {
+      context.commit('setExitDown', true);
+      context.commit('setEnterDown', true);
+    }
+  },
+  //next step: in Scroller.vue set 'SetExitDown... SetEnterUp' etc
+  //remember to clear the enters first using the clearEnters action
   getters: {
     allPathsData: state => state.allPathsData
   }

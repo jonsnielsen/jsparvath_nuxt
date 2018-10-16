@@ -1,7 +1,7 @@
 $anim-dur: .5s;
 $anim-delay: 0.2s;
 $_between-change-route: 0.2s;
-$_anim-delay-dur: $anim-dur + 3 * $anim-delay;
+$_anim-delay-dur: $anim-dur + 4  * $anim-delay;
 $_change-route-delay: $_anim-delay-dur + $_between-change-route;
 
 $total: $_change-route-delay + $_anim-delay-dur;
@@ -14,51 +14,109 @@ $exit-enter-distance: 70px;
 }
 
 
-.active {
-  transform: translate3d(0,0,0);
-  opacity: 1;
+// .active {
+//   // transform: translate3d(0,0,0);
+//   // opacity: 1;
+// }
+
+.exitUp, .enterUp {
+  &.transition1 {
+    transition: opacity $anim-dur ease-in-out,
+                transform $anim-dur ease-in-out;
+  }
+  &.transition2 {
+    transition: opacity $anim-dur $anim-delay ease-in-out,
+                transform $anim-dur $anim-delay ease-in-out;
+  
+  }
+  &.transition3 {
+    transition: opacity $anim-dur ($anim-delay * 2) ease-in-out,
+                transform $anim-dur ($anim-delay * 2) ease-in-out;
+  }
+  
+  &.transition4 {
+    transition: opacity $anim-dur ($anim-delay * 3) ease-in-out,
+                transform $anim-dur ($anim-delay * 3) ease-in-out;
+  }
+  
+  &.transition5 {
+    transition: opacity $anim-dur ($anim-delay * 4) ease-in-out,
+                transform $anim-dur ($anim-delay * 4) ease-in-out;
+  }
+}
+.exitDown, .enterDown {
+  &.transition5 {
+    transition: opacity $anim-dur ease-in-out,
+                transform $anim-dur ease-in-out;
+  }
+  &.transition4 {
+    transition: opacity $anim-dur $anim-delay ease-in-out,
+                transform $anim-dur $anim-delay ease-in-out;
+  
+  }
+  &.transition3 {
+    transition: opacity $anim-dur ($anim-delay * 2) ease-in-out,
+                transform $anim-dur ($anim-delay * 2) ease-in-out;
+  }
+  
+  &.transition2 {
+    transition: opacity $anim-dur ($anim-delay * 3) ease-in-out,
+                transform $anim-dur ($anim-delay * 3) ease-in-out;
+  }
+  
+  &.transition1 {
+    transition: opacity $anim-dur ($anim-delay * 4) ease-in-out,
+                transform $anim-dur ($anim-delay * 4) ease-in-out;
+  }
 }
 
-.transition1 {
-  transition: opacity $anim-dur ease-in-out,
-              transform $anim-dur ease-in-out;
-}
-.transition2 {
-  transition: opacity $anim-dur $anim-delay ease-in-out,
-              transform $anim-dur $anim-delay ease-in-out;
-
-}
-.transition3 {
-  transition: opacity $anim-dur ($anim-delay * 2) ease-in-out,
-              transform $anim-dur ($anim-delay * 2) ease-in-out;
-}
-
-.transition4 {
-  transition: opacity $anim-dur ($anim-delay * 3) ease-in-out,
-              transform $anim-dur ($anim-delay * 3) ease-in-out;
-}
 
 .exit {
-    transform: translate3d(0, -$exit-enter-distance, 0);
-    opacity: 0;
-  }
-.exitUp {
-    transform: translate3d(0, -$exit-enter-distance, 0);
-    opacity: 0;
-  }
-.exitDown {
-  transform: translate3d(0, $exit-enter-distance, 0);
-  opacity: 0;
-}
-.outDown {
+    // transform: translate3d(0, -$exit-enter-distance, 0);
+    // opacity: 0;
+
+    &.exitUp {
+      transform: translate3d(0, -$exit-enter-distance, 0);
+      opacity: 0;
+    }
+  &.exitDown {
     transform: translate3d(0, $exit-enter-distance, 0);
     opacity: 0;
+  }
 }
 
-.outUp {
-  transform: translate3d(0, -$exit-enter-distance,0);
+// .enterUp {
+//     transform: translate3d(0, $exit-enter-distance, 0);
+//     opacity: 0;
+//   }
+
+// .enterDown {
+//   transform: translate3d(0, -$exit-enter-distance, 0);
+//   opacity: 0;
+//   }
+.enter {
+  // opacity: 0;
+  &.enterUp {
+    transform: translate3d(0, $exit-enter-distance, 0);
+    opacity: 0;
+  }
+
+&.enterDown {
+  transform: translate3d(0, -$exit-enter-distance, 0);
   opacity: 0;
+  }
 }
+
+
+// .outDown {
+//     transform: translate3d(0, $exit-enter-distance, 0);
+//     opacity: 0;
+// }
+
+// .outUp {
+//   transform: translate3d(0, -$exit-enter-distance,0);
+//   opacity: 0;
+// }
 
 body {
   transition: background-color $bc-dur;
