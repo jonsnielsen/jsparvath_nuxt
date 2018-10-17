@@ -11,7 +11,7 @@
           <h2>Freelance web developer, Danmarks Miljøportal (DMP)</h2>
           <p class="greyed">
             Implementing DMP's new website using HTML5, CSS & JavaScript on the front-end and using Umbraco CMS on the
-            back-end
+            back-end.
           </p>
         </section>
 
@@ -19,7 +19,7 @@
           <p class="time-span">11 / 2017 - 04 / 2018</p>
           <h2>Back-end consultant, Kraftvaerk</h2>
           <p class="greyed">
-            I Primarily worked with C#/.NET and Umbraco as CMS, but also worked on things as: GDPR compliance, web
+            I primarily worked with C#/.NET and Umbraco as CMS, but also worked on things as: GDPR compliance, web
             server configuration, automating tasks with code.
           </p>
         </section>

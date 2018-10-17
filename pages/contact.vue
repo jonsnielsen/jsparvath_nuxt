@@ -6,7 +6,7 @@
       <section class="content contact-content">
 
         <p class="transition2" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown , enter: enterRoute}">
-          Drop me a line if you would like together, request a quote or just say hello!
+          Drop me a line if you would like to work together, get a coffe or just say hello!
         </p>
 
         <p id="contact-email" class="transition3" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown , enter: enterRoute}"><span
