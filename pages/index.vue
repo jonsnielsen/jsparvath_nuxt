@@ -34,13 +34,6 @@
     max-width: 40ch;
   }
 
-  h1 {
-    font-size: 75px;
-  }
-
-  p {
-    font-size: 11px;
-  }
 
   @media (max-width: $breakpoint-mobile) {
     br {
@@ -49,10 +42,6 @@
 
     .hello {
       font-weight: 400;
-    }
-
-    p {
-      line-height: 1.8em;
     }
   }
 </style>

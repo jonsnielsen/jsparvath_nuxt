@@ -21,15 +21,6 @@ section.content {
   height: 100px;
 }
 
-@media (max-width: $breakpoint-mobile) {
-  main {
-    flex-direction: column;
-  }
-  section.content {
-    // margin-left: 70px;
-    margin-top: 50px;
-  }
-}
 body {
   position: fixed;
   overflow: hidden;
@@ -93,7 +84,7 @@ a {
 
 .headline {
   font-weight: $h1-weight;
-  @include fluid-font2(300px, 1400px,  $h1-min-size, $h1-max-size);
+  @include fluid-font2(400px, 1400px,  $h1-min-size, $h1-max-size);
   font-family: $h1-font;
   line-height: .8em;
   // background-color: grey;
@@ -121,7 +112,7 @@ p, li {
 
 .time-span {
   // font-size: 10px;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 
 h2 {
@@ -130,6 +121,24 @@ h2 {
 
 .booold {
   font-weight: 600;
+}
+
+
+
+@media (max-width: $breakpoint-mobile) {
+  main {
+    flex-direction: column;
+  }
+  section.content {
+    // margin-left: 70px;
+    margin-top: 50px;
+  }
+  
+  h2, li,p {
+    line-height: 1.8em;
+    font-size: 11px;
+
+  }
 }
 
 
