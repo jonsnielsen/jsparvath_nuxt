@@ -10,7 +10,7 @@
         </p>
 
         <p id="contact-email" class="transition3" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown , enter: enterRoute}"><span
-            class="booold">jonathan.sparvath@gmail.com</span></p>
+            class="booold"><a href="mailto:jonathan.sparvath@gmail.com">jonathan.sparvath@gmail.com</a></span></p>
       </section>
     </main>
   </div>
