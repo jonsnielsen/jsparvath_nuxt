@@ -11,9 +11,11 @@
 
 main {
   display: flex;
+  // background-color: blue;
 }
 
 section.content {
+  // background-color: teal;
 }
 
 #arrow {
@@ -53,6 +55,9 @@ p {
 h1 {
   // background-color: yellow;
   display: inline-block;
+  // min-width: 580px;
+  min-width: 40vw;
+  // max-width: ;
 }
 
 h2 {
@@ -88,7 +93,7 @@ a {
   font-family: $h1-font;
   line-height: .8em;
   // background-color: grey;
-  margin-right: 20%;
+  // margin-right: 20%;
   display: inline-block;
 
 
