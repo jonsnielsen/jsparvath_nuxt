@@ -37,4 +37,8 @@
   h1 {
     font-size: 75px;
   }
+
+  p {
+    font-size: 11px;
+  }
 </style>
