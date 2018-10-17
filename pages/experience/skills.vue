@@ -13,37 +13,44 @@
 
         <section class="item-group transition3 skills-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">
           <h2>Front end:</h2>
-          <ul>
-            <li>HTML5,&nbsp;</li>
-            <li>CSS3,&nbsp;</li>
-            <li>Sass,&nbsp;</li>
-            <li>Vue.js,&nbsp;</li>
-            <li>Electron.js,&nbsp;</li>
-            <li>Angular 2+,&nbsp;</li>
-            <li>Xamarin</li>
-          </ul>
+          <p>HTML5, CSS3, Sass, Vue.js, Electron.js, Angular 2+, Xamarin </p>
+
+          <!-- <ul>
+              <li>HTML5,&nbsp;</li>
+              <li>CSS3,&nbsp;</li>
+              <li>Sass,&nbsp;</li>
+              <li>Vue.js,&nbsp;</li>
+              <li>Electron.js,&nbsp;</li>
+              <li>Angular 2+,&nbsp;</li>
+              <li>Xamarin</li>
+            </ul> -->
         </section>
 
         <section class="item-group transition4 skills-item-group" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,  enter: enterRoute}">
           <h2>Back end:</h2>
-          <ul>
-            <li>Node.js,&nbsp;</li>
-            <li>Express.js,&nbsp;</li>
-            <li>MongoDB,&nbsp;</li>
-            <li>SQL,&nbsp;</li>
-            <li>C#,&nbsp;</li>
-            <li>Umbraco,&nbsp;</li>
-            <li>F#</li>
-          </ul>
+          <p>Node.js, Express.js, MongoDB, SQL, C#, Umbraco, F#</p>
+
+          <!-- <ul>
+              <li>Node.js,&nbsp;</li>
+              <li>Express.js,&nbsp;</li>
+              <li>MongoDB,&nbsp;</li>
+              <li>SQL,&nbsp;</li>
+              <li>C#,&nbsp;</li>
+              <li>Umbraco,&nbsp;</li>
+              <li>F#</li>
+            </ul> -->
         </section>
+   
 
         <section class="item-group transition5 skills-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">
           <h2>Tools:</h2>
-          <ul>
-            <li>Git,&nbsp;</li>
-            <li>SVN,&nbsp;</li>
-            <li>Webpack</li>
-          </ul>
+          <p>Git, SVN, Webpack</p>
+
+          <!-- <ul>
+              <li>Git,&nbsp;</li>
+              <li>SVN,&nbsp;</li>
+              <li>Webpack</li>
+            </ul> -->
         </section>
 
       </section>

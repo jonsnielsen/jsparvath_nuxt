@@ -8,7 +8,7 @@
         </li>
       </nuxt-link>
 
-      <nuxt-link class="nl" to="/experience/work">
+      <nuxt-link class="nl" to="/experience/skills">
         <li class="menu-item">
           Skills & Experience
         </li>

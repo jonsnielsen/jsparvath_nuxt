@@ -5,8 +5,8 @@ import { log } from 'util';
 //the order here DOES matter, so when scrolling it will take the NEXT/PREV one.
 const paths = {
   '/': { color: '#000000', numberOfRoutes: 1, position: 1 },
-  '/experience/work': { color: '#272729', numberOfRoutes: 3, position: 1 },
-  '/experience/skills': { color: '#272729', numberOfRoutes: 3, position: 2 },
+  '/experience/skills': { color: '#272729', numberOfRoutes: 3, position: 1 },
+  '/experience/work': { color: '#272729', numberOfRoutes: 3, position: 2 },
   '/experience/studies': { color: '#272729', numberOfRoutes: 2, position: 3 },
   '/contact': { color: '#4B4A4F', numberOfRoutes: 1, position: 1 }
 };
