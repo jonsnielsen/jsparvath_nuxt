@@ -33,4 +33,8 @@
   #about-content {
     max-width: 40ch;
   }
+
+  h1 {
+    font-size: 75px;
+  }
 </style>
