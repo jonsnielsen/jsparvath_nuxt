@@ -18,16 +18,12 @@
 
         for (let path in allPathsData) {
           if (nextRoute) {
-            this.$store.dispatch('clearEnters')
-            this.$store.dispatch('exitUp');
             this.$router.push(path);
             return;
           }
           if (path === currentPath) {
             if (direction < 0) {
               if (previousPath) {
-                this.$store.dispatch('clearEnters')
-                this.$store.dispatch('exitDown');
                 this.$router.push(previousPath);
               }
               return;
@@ -45,8 +41,6 @@
 
         let scrollHandler = new ScrollHandler(window, 100);
         scrollHandler.addEventListener('wheel', (deltaY) => {
-          console.log('changePage');
-          console.log('deltaY: ' + deltaY);
           this.handleScroll(deltaY);
         })
       });

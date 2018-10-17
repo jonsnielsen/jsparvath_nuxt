@@ -10,7 +10,7 @@
           <p class="time-span">08 / 2018 - present</p>
           <h2>Freelance web developer, Danmarks Miljøportal (DMP)</h2>
           <p class="greyed">
-            Implementing DMP's new website using HTML5, CSS & JavaScript on the fron-end and using Umbraco CMS on the
+            Implementing DMP's new website using HTML5, CSS & JavaScript on the front-end and using Umbraco CMS on the
             back-end
           </p>
         </section>

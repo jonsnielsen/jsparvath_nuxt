@@ -7,7 +7,7 @@ $_change-route-delay: $_anim-delay-dur + $_between-change-route;
 $total: $_change-route-delay + $_anim-delay-dur;
 $bc-dur: $total;
 
-$exit-enter-distance: 70px;
+$exit-enter-distance: 40px;
 $exit-enter-distance-mobile: 30px;
 
 :export {

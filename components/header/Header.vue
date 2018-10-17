@@ -8,7 +8,7 @@
         </li>
       </nuxt-link>
 
-      <nuxt-link class="nl" to="/experience/skills">
+      <nuxt-link class="nl" to="/experience/work">
         <li class="menu-item">
           Skills & Experience
         </li>
@@ -95,7 +95,6 @@
         let routePosition = currentPathObj['position'];
 
         if (routePosition !== 1) {
-          console.log('not ');
           for (let path in this.allPathsData) {
             let pathData = this.allPathsData[path];
             if (pathData['position'] === 1) {
@@ -131,7 +130,6 @@
       let menuItems = [...linkItems].map(item => {
         let child = item.children[0]
         child.path = item.getAttribute('href');
-        console.log('child.path: ' + child.path);
         return child;
       });
       this.menuItems = menuItems;

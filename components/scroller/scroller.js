@@ -3,7 +3,6 @@
 
 function Handler(domElem, timeout) {
   this.addEventListener = function (eventName, callback) {
-    console.log(callback);
     wheelEvent(domElem, timeout, callback);
     touchEvent(domElem, callback);
   }
