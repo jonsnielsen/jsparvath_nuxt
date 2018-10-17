@@ -56,7 +56,9 @@ h1 {
   // background-color: yellow;
   display: inline-block;
   // min-width: 580px;
-  min-width: 40vw;
+  width: 40vw;
+  // width: 600px;
+  max-width: 600px;
   // max-width: ;
 }
 
