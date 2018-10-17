@@ -19,9 +19,8 @@
           <p class="time-span">11 / 2017 - 04 / 2018</p>
           <h2>Back-end consultant, Kraftvaerk</h2>
           <p class="greyed">
-            I Primarily worked with C#/.NET and Umbraco as CMS,but also worked on things as: GDPR compliance, web
-            server
-            configuration, automating tasks with code and fixing bugs on clients' websites
+            I Primarily worked with C#/.NET and Umbraco as CMS, but also worked on things as: GDPR compliance, web
+            server configuration, automating tasks with code.
           </p>
         </section>
       </section>
