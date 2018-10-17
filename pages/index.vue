@@ -6,7 +6,7 @@
       <section id="about-content" class="content">
 
         <p class=" transition2 item-group" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">
-          <span class="booold">Hello!</span> <br>
+          <span class="booold hello">Hello!</span> <br class="break">
           I'm <span class="booold">Jonathan Sparvath</span> a fullstack developer with emphasis on the backend, but I
           absolutely love working on the front end as well.
           Most of my free time is spent learning the newest shiny tool or framework, but I'm also a big proponent of
@@ -29,7 +29,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   #about-content {
     max-width: 40ch;
   }
@@ -40,5 +40,19 @@
 
   p {
     font-size: 11px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    br {
+      display: none;
+    }
+
+    .hello {
+      font-weight: 400;
+    }
+
+    p {
+      line-height: 1.8em;
+    }
   }
 </style>
