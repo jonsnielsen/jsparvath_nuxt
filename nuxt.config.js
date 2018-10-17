@@ -15,7 +15,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/browser-logo.png' },
+      { rel: 'icon', type: 'image/png', href: '/browser-logo.png' },
       { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,900" }
     ]
   },
