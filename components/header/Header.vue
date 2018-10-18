@@ -156,15 +156,16 @@
   #menu-ul {
     display: flex;
     justify-content: space-between;
-    max-width: 400px;
+    max-width: 500px;
     /* margin: 3px auto; */
     margin: 0 0 10px 0;
     /* padding: 0 2rem; */
     list-style-type: none;
+    /* background-color: blue; */
+    /* margin: 0 auto; */
   }
 
   .nl {
-    font-size: $menu-item-size;
     text-decoration: none;
     cursor: pointer;
     margin: 0;
@@ -173,6 +174,10 @@
   }
 
   .menu-item {
+    @include fluid-font2($menu-item-min-screen, $menu-item-max-screen, $menu-item-min-size, $menu-item-max-size);
+
+    /* font-size: $menu-item-size; */
+
     display: inline-block;
   }
 

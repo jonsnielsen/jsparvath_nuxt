@@ -55,7 +55,7 @@ p {
 h1 {
   // background-color: yellow;
   display: inline-block;
-  // min-width: 580px;
+  min-width: 350px;
   width: 40vw;
   // width: 600px;
   max-width: 600px;
@@ -127,8 +127,9 @@ h2 {
 }
 
 .booold {
-  font-weight: 600;
+  font-weight: 500;
 }
+
 
 
 
@@ -146,6 +147,21 @@ h2 {
 
   }
 }
+
+// @media only screen and (orientation: portrait) {
+//   main {
+//         flex-direction: column;
+//       }
+//       section.content {
+//         margin-top: 50px;
+//       }
+      
+//       h2, li,p {
+//         line-height: 1.8em;
+//         font-size: 11px;
+    
+//       }
+// }
 
 
 

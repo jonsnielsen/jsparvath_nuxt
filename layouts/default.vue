@@ -74,5 +74,24 @@
       /* margin: 0 auto; */
       display: none;
     }
+
+
+    #layout-wrapper {
+      padding: 0 30px;
+      padding: 0 10vw;
+      /* background-color: blue; */
+    }
+  }
+
+
+  @media (max-height: $breakpoint-mobile-height) {
+    #footer {
+      bottom: 20px;
+      display: none;
+    }
+
+    h1 {
+      background-color: blue;
+    }
   }
 </style>

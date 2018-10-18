@@ -18,7 +18,7 @@ $body-font: $headline-font;
 $body-size: 10px;
 $letter-spacing: 1px;
 
-$h1-min-size: 60px;
+$h1-min-size: 55px;
 $h1-max-size: 110px;
 
 
@@ -37,7 +37,11 @@ $p-font-size: $body-size;
 
 $menu-item-weight: 0;
 $menu-item-font: $body-font;
-$menu-item-size: 0.7em;
+// $menu-item-size: 0.5em;
+$menu-item-max-size: 11px;
+$menu-item-min-size: 8px;
+$menu-item-min-screen: 250px;
+$menu-item-max-screen: 320px;
 $emphasized: 800;
 
 
@@ -48,4 +52,5 @@ $footer-item-font-size: 0.5em;
 
 /* --------------- OTHER ----------------- */
 
-$breakpoint-mobile: 600px;
+$breakpoint-mobile-height: 480px;
+$breakpoint-mobile: 660px;
