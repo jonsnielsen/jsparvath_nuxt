@@ -88,10 +88,7 @@
     #footer {
       bottom: 20px;
       display: none;
-    }
 
-    h1 {
-      background-color: blue;
     }
   }
 </style>
