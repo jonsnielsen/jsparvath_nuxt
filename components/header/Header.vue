@@ -2,23 +2,23 @@
   <nav>
 
     <ul id="menu-ul">
-      <nuxt-link class="nl" exact to="/">
-        <li class="menu-item">
+      <li class="menu-item">
+        <nuxt-link class="nl" exact to="/">
           About
-        </li>
-      </nuxt-link>
+        </nuxt-link>
+      </li>
 
-      <nuxt-link class="nl" to="/experience/skills">
-        <li class="menu-item">
+      <li class="menu-item">
+        <nuxt-link class="nl" to="/experience/skills">
           Skills & Experience
-        </li>
-      </nuxt-link>
+        </nuxt-link>
+      </li>
 
-      <nuxt-link class="nl" to="/contact">
-        <li class="menu-item">
+      <li class="menu-item">
+        <nuxt-link class="nl" to="/contact">
           Contact
-        </li>
-      </nuxt-link>
+        </nuxt-link>
+      </li>
     </ul>
     <ProgressBar :progressBarData="progressBarData"></ProgressBar>
 
@@ -44,6 +44,7 @@
   };
   function prepareItemData(item, allPathsData) {
     let menuItemWidth = item.clientWidth;
+    console.log(item)
     let offsetLeft = cumulativeOffset(item);
     // let offsetLeft = item.getBoundingClientRect().left;
     // (item).left;
@@ -108,6 +109,8 @@
         }
 
         let pathObj = menuItemsData.find(p => p.path === basePath);
+        console.log('pathObj')
+        console.log(pathObj)
         let width = pathObj.barWidth;
         let offsetLeft = pathObj.offsetLeft + width * (routePosition - 1);
         return {
@@ -125,12 +128,16 @@
       }
     },
     mounted() {
-      let linkItems = document.querySelectorAll('.nl');
+      let linkItems = document.querySelectorAll('.menu-item');
       //setup the menuitems array
       let menuItems = [...linkItems].map(item => {
+        // console.log('dlfkjd')
+        // console.log(item)
+        // item.path = item.getAttribute('href');
         let child = item.children[0]
-        child.path = item.getAttribute('href');
-        return child;
+        // console.log(item.children)
+        item.path = child.getAttribute('href');
+        return item;
       });
       this.menuItems = menuItems;
 
