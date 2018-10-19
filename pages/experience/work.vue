@@ -26,6 +26,7 @@
             Other tasks include: GDPR compliance, web server configuration, and automating tasks with code
           </p>
         </section>
+        <Arrow></Arrow>
       </section>
     </main>
   </div>
@@ -33,8 +34,11 @@
 
 <script>
   import RouteTransition from '~/components/mixins/RouteTransitionMixin'
-
+  import Arrow from '~/components/Arrow';
   export default {
+    components: {
+      Arrow
+    },
     mixins: [RouteTransition]
   }
 </script>

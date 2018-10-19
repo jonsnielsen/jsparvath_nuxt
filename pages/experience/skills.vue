@@ -40,7 +40,7 @@
               <li>F#</li>
             </ul> -->
         </section>
-   
+
 
         <section class="item-group transition5 skills-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">
           <h2>Tools:</h2>
@@ -52,7 +52,7 @@
               <li>Webpack</li>
             </ul> -->
         </section>
-
+        <Arrow></Arrow>
       </section>
     </main>
   </div>
@@ -60,8 +60,12 @@
 
 <script>
   import RouteTransition from '~/components/mixins/RouteTransitionMixin'
+  import Arrow from '~/components/Arrow';
 
   export default {
+    components: {
+      Arrow
+    },
     mixins: [RouteTransition]
   }
 </script>

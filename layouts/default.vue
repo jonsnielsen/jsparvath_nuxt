@@ -87,8 +87,11 @@
   @media (max-height: $breakpoint-mobile-height) {
     #footer {
       bottom: 20px;
-      display: none;
+      /* display: none; */
+    }
 
+    #header-wrapper {
+      padding: 6vh 0 12vh 0;
     }
   }
 </style>

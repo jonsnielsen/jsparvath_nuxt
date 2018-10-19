@@ -11,6 +11,7 @@
 
         <p id="contact-email" class="transition3" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown , enter: enterRoute}"><span
             class="booold"><a href="mailto:jonathan.sparvath@gmail.com">jonathan.sparvath@gmail.com</a></span></p>
+            <Arrow></Arrow>
       </section>
     </main>
   </div>
@@ -18,8 +19,11 @@
 
 <script>
   import RouteTransition from '~/components/mixins/RouteTransitionMixin'
-
+  import Arrow from '~/components/Arrow';
   export default {
+    components: {
+      Arrow
+    },
     mixins: [RouteTransition]
   }
 </script>

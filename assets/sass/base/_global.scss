@@ -16,11 +16,13 @@ main {
 
 section.content {
   // background-color: teal;
+  position: relative;
 }
 
 #arrow {
-  width: 40px;
-  height: 100px;
+  // width: 40px;
+  // height: 100px;
+    top: 43vh;
 }
 
 body {
@@ -131,7 +133,16 @@ h2 {
 }
 
 
-
+@media (max-height: $breakpoint-mobile-height) {
+  #arrow {
+    // display: none;
+    top: 60vh;
+  }
+  section.content {
+    // margin-top: 20px;
+    // background-color: #fff;
+  }
+}
 
 @media (max-width: $breakpoint-mobile) {
   main {
@@ -146,7 +157,13 @@ h2 {
     font-size: 11px;
 
   }
+  #arrow {
+    display: none;
+    // top: 55vh;
+  }
 }
+
+
 
 h1 {
   // background-color: blue;

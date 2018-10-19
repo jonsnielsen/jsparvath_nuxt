@@ -14,11 +14,6 @@ $exit-enter-distance-mobile: 30px;
   changeRouteDelay: $_change-route-delay;
 }
 
-// .active {
-//   // transform: translate3d(0,0,0);
-//   // opacity: 1;
-// }
-
 .exitUp, .enterUp {
   &.transition1 {
     transition: opacity $anim-dur ease-in-out,
@@ -72,9 +67,6 @@ $exit-enter-distance-mobile: 30px;
 
 
 .exit {
-    // transform: translate3d(0, -$exit-enter-distance, 0);
-    // opacity: 0;
-
     &.exitUp {
       transform: translate3d(0, -$exit-enter-distance, 0);
       opacity: 0;
@@ -85,34 +77,7 @@ $exit-enter-distance-mobile: 30px;
   }
 }
 
-@media (max-width: $breakpoint-mobile) {
-  
-.exit {
-  // transform: translate3d(0, -$exit-enter-distance, 0);
-  // opacity: 0;
-
-  &.exitUp {
-    transform: translate3d(0, -$exit-enter-distance-mobile, 0);
-    opacity: 0;
-  }
-&.exitDown {
-  transform: translate3d(0, $exit-enter-distance-mobile, 0);
-  opacity: 0;
-}
-}
-}
-
-// .enterUp {
-//     transform: translate3d(0, $exit-enter-distance, 0);
-//     opacity: 0;
-//   }
-
-// .enterDown {
-//   transform: translate3d(0, -$exit-enter-distance, 0);
-//   opacity: 0;
-//   }
 .enter {
-  // opacity: 0;
   &.enterUp {
     transform: translate3d(0, $exit-enter-distance, 0);
     opacity: 0;
@@ -126,30 +91,28 @@ $exit-enter-distance-mobile: 30px;
 
 @media (max-width: $breakpoint-mobile) {
   
+  .exit {
+    &.exitUp {
+      transform: translate3d(0, -$exit-enter-distance-mobile, 0);
+      opacity: 0;
+    }
+    &.exitDown {
+    transform: translate3d(0, $exit-enter-distance-mobile, 0);
+    opacity: 0;
+    }
+  }
+
   .enter {
-    // opacity: 0;
     &.enterUp {
       transform: translate3d(0, $exit-enter-distance-mobile, 0);
       opacity: 0;
     }
-  
-  &.enterDown {
+    &.enterDown {
     transform: translate3d(0, -$exit-enter-distance-mobile, 0);
     opacity: 0;
     }  
   }
-  }
-  
-
-// .outDown {
-//     transform: translate3d(0, $exit-enter-distance, 0);
-//     opacity: 0;
-// }
-
-// .outUp {
-//   transform: translate3d(0, -$exit-enter-distance,0);
-//   opacity: 0;
-// }
+}
 
 body {
   transition: background-color $bc-dur;

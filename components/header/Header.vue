@@ -182,15 +182,11 @@
 
   .menu-item {
     @include fluid-font2($menu-item-min-screen, $menu-item-max-screen, $menu-item-min-size, $menu-item-max-size);
-
-    /* font-size: $menu-item-size; */
-
     display: inline-block;
   }
 
-  @media (max-width: $breakpoint-mobile) {
-    #menu-ul {
-      margin: 0 0 10px 0;
-    }
+
+  @media (max-height: $breakpoint-mobile-height) {
+
   }
 </style>
