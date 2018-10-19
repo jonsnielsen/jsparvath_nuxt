@@ -2,7 +2,7 @@ const pkg = require('./package')
 
 
 module.exports = {
-  mode: 'universaln',
+  mode: 'universal',
 
   /*
   ** Headers of the page
@@ -40,21 +40,18 @@ module.exports = {
   */
   plugins: [
     '~/plugins/scroller-plugin',
-    { src: '~/plugins/polyfills.js', ssr: false }
+    { src: '~/plugins/polyfills.js', ssr: false },
+    { src: '~plugins/ga.js', ssr: false }
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+
     [
       'nuxt-sass-resources-loader', [
         '~assets/sass/helpers/_1-helpers.scss'
-      ],
-      [
-        '@nuxtjs/google-analytics', {
-          id: 'UA-113768376-2'
-        }
       ]
     ]
   ],
