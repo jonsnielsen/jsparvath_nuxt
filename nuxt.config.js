@@ -50,6 +50,11 @@ module.exports = {
     [
       'nuxt-sass-resources-loader', [
         '~assets/sass/helpers/_1-helpers.scss'
+      ],
+      [
+        '@nuxtjs/google-analytics', {
+          id: 'UA-113768376-2'
+        }
       ]
     ]
   ],
