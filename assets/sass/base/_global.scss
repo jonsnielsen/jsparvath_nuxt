@@ -19,7 +19,7 @@ section.content {
   position: relative;
 }
 
-#arrow {
+#arrow-wrapper {
   // width: 40px;
   // height: 100px;
     top: 43vh;
@@ -134,7 +134,7 @@ h2 {
 
 
 @media (max-height: $breakpoint-mobile-height) {
-  #arrow {
+  #arrow-wrapper {
     // display: none;
     top: 60vh;
   }
@@ -149,7 +149,7 @@ h2 {
     flex-direction: column;
   }
   section.content {
-    margin-top: 50px;
+    margin-top: 30px;
   }
   
   h2, li,p {
@@ -157,17 +157,12 @@ h2 {
     font-size: 11px;
 
   }
-  #arrow {
+  #arrow-wrapper {
     display: none;
     // top: 55vh;
   }
 }
 
-
-
-h1 {
-  // background-color: blue;
-}
 
 // @media only screen and (orientation: portrait) {
 //   main {

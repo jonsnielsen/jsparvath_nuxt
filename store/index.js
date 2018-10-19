@@ -18,6 +18,7 @@ for (let path in paths) {
   pathObj.index = i;
   i++;
 }
+paths.length = i;
 
 export default {
   state() {
