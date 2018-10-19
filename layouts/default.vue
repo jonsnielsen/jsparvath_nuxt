@@ -92,6 +92,13 @@
 
     #header-wrapper {
       padding: 6vh 0 12vh 0;
+      padding: 6vh 0 16vh 0;
+    }
+  }
+
+  @media (max-height: $breakpoint-mobile-height2) {
+    #arrow {
+      display: none;
     }
   }
 </style>
