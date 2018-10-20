@@ -5,48 +5,69 @@ module.exports = {
   mode: 'universal',
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: pkg.name,
     htmlAttrs: {
       lang: 'en',
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: pkg.description
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/png', href: '/browser-logo.png' },
-      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,900" }
+    link: [{
+        rel: 'icon',
+        type: 'image/png',
+        href: '/browser-logo.png'
+      },
+      {
+        rel: 'stylesheet',
+        href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,900"
+      }
     ]
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: false,
 
   /*
-  ** Global CSS
-  */
-  css: [
-    { src: '~/assets/sass/main.scss', lang: 'sass' }
-  ],
+   ** Global CSS
+   */
+  css: [{
+    src: '~/assets/sass/main.scss',
+    lang: 'sass'
+  }],
 
   /*
-  ** Plugins to load before mounting the App
-  */
+   ** Plugins to load before mounting the App
+   */
   plugins: [
     '~/plugins/scroller-plugin',
-    { src: '~/plugins/polyfills.js', ssr: false },
-    { src: '~plugins/ga.js', ssr: false }
+    {
+      src: '~/plugins/polyfills.js',
+      ssr: false
+    },
+    {
+      src: '~plugins/ga.js',
+      ssr: false
+    }
   ],
 
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
 
     [
@@ -57,15 +78,12 @@ module.exports = {
   ],
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
     postcss: [
       require('autoprefixer')({
-        browsers: ['> 5%']
+        browsers: ['> 1%']
       })
     ]
   },
