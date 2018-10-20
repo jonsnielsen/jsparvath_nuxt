@@ -12,14 +12,14 @@ function Handler(domElem, timeout) {
 let touchStart = 0;
 
 let touchEvent = function (domElem, callback) {
-  domElem.addEventListener("touchstart", () => touchStart = event.changedTouches[0].clientY);
+  domElem.addEventListener("touchstart", () => touchStart = event.changedTouches[0].clientY, { passive: true });
   domElem.addEventListener("touchend", event => {
     let direction = touchStart - event.changedTouches[0].clientY;
     if (direction === 0) {
       return
     }
     callback(direction);
-  });
+  }, { passive: true });
 };
 
 //-------------------------- WHEEL ---------------------------
@@ -33,7 +33,7 @@ let wheelEvent = function (domElem, timeout, callback) {
     if (timeDiff > timeout) {
       callback(e.deltaY);
     }
-  })
+  }, { passive: true })
 }
 
 export default Handler;

@@ -42,7 +42,7 @@
         let scrollHandler = new ScrollHandler(window, 100);
         scrollHandler.addEventListener('wheel', (deltaY) => {
           this.handleScroll(deltaY);
-        })
+        }, { passive: true })
       });
     }
   };
