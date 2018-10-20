@@ -18,7 +18,7 @@ for (let path in paths) {
   pathObj.index = i;
   i++;
 }
-paths.length = i;
+const pathsLength = i;
 
 export default {
   state() {
@@ -30,7 +30,8 @@ export default {
       enterUp: false,
       enterDown: false,
       currentPathData: {},
-      allPathsData: paths
+      allPathsData: paths,
+      pathsLength
     }
   },
   mutations: {

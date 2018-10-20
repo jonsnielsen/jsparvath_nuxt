@@ -2,11 +2,6 @@ import { mapState } from 'vuex'
 
 
 export default {
-  data() {
-    return {
-      // enterUp: true,
-    }
-  },
   computed: {
     ...mapState(['exitRoute', 'exitUp', 'exitDown', 'enterUp', 'enterDown', 'enterRoute'])
   },
