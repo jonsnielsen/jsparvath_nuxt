@@ -35,7 +35,7 @@ export default function (context) {
   context.store.commit('changePath', context.route.path);
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      context.store.dispatch('clearExits');
+      // context.store.dispatch('clearExits');
       resolve();
     }, delay)
   })
