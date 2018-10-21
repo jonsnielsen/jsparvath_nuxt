@@ -68,6 +68,7 @@
     },
     mixins: [RouteTransition]
   }
+
 </script>
 
 <style lang="scss" scoped>
@@ -75,11 +76,12 @@
     max-width: 30ch;
   }
 
-  #skills-teaser {
-    max-width: 20ch;
+  .skills-teaser {
+    max-width: 35ch;
   }
 
   .skills-item-group {
     max-width: 20ch;
   }
+
 </style>

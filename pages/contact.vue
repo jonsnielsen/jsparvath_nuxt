@@ -13,7 +13,7 @@
             class="booold"><a href="mailto:jonathan.sparvath@gmail.com">jonathan.sparvath@gmail.com</a></span></p>
 
         <div id="connect-group" class="transition4" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown , enter: enterRoute}">
-          <p id="connect-text">lets connect!</p>
+          <p id="connect-text">Lets connect!</p>
           <ul id="connect-item-list">
             <li><a class="connect-item" href="https://www.linkedin.com/in/jsparvath/" rel="noopener" target="_blank">LinkedIn</a>&nbsp;&nbsp;/</li>
             <li>&nbsp;&nbsp;<a class="connect-item" href="https://github.com/jsparvath" rel="noopener" target="_blank">GitHub</a>&nbsp;&nbsp;/</li>

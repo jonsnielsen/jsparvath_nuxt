@@ -8,12 +8,10 @@
 
 main {
   display: flex;
-  // background-color: blue;
 }
 
 section.content {
   position: relative;
-  // background-color: blue;
 
 }
 
@@ -49,18 +47,13 @@ div {
   padding: 0;
 }
 
-p {
-  // margin-bottom: 1em;
-}
 
 h1 {
-  // background-color: yellow;
-  display: inline-block;
-  min-width: 350px;
-  width: 40vw;
-  // width: 600px;
+  display: inline;
+  min-width: 200px;
+  width: 37vw;
+  padding-right: 50px;
   max-width: 600px;
-  // max-width: ;
 }
 
 h2 {
@@ -96,8 +89,6 @@ a {
   @include fluid-font2(400px, 1400px, $h1-min-size, $h1-max-size);
   font-family: $h1-font;
   line-height: .8em;
-  // background-color: grey;
-  // margin-right: 20%;
   display: inline-block;
 
 
@@ -108,7 +99,7 @@ p,
 li {
   font-size: $p-font-size;
   font-weight: 300;
-  line-height: 2em;
+  line-height: 1.7em;
   letter-spacing: .1em;
 }
 
@@ -134,7 +125,6 @@ h2 {
 
 #header-wrapper {
   padding: 8vh 0 26vh 0;
-  /* background-color: violet; */
 }
 
 @media (max-width: $breakpoint-mobile-width) {
@@ -155,12 +145,13 @@ h2 {
   }
 
   #arrow-wrapper {
-    top: calc(60vh - 15vw) !important;
+    top: calc(47vh) !important;
+    top: calc(47vh) !important;
     left: 0;
   }
 
   #header-wrapper {
-    padding: 6vh 0 (12vw) 0 !important;
+    padding: 6vh 0 12vh 0 !important;
   }
 
   //----------------- LAYOUT ----------------
@@ -187,9 +178,10 @@ h2 {
   }
 }
 
-@media (max-height: $breakpoint-mobile-height),
-(max-width: $breakpoint-mobile-width3) {
+// (max-width: $breakpoint-mobile-width3)
+@media (max-height: $breakpoint-mobile-height) {
   #header-wrapper {
+    padding: 6vh 0 16vh 0;
     padding: 6vh 0 16vh 0;
   }
 
@@ -207,7 +199,6 @@ h2 {
 
 @media (max-width: $breakpoint-mobile-width) and (max-height: $breakpoint-mobile-height) {
   #arrow-wrapper {
-    // background-color: blue;
     display: none;
   }
 }

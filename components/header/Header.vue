@@ -8,6 +8,10 @@
         </nuxt-link>
       </li>
 
+      <!-- <li class="menu-item">
+        <nuxt-link class="nl" to="/experience/Skills">Skills & Experience</nuxt-link>
+      </li> -->
+
       <li class="menu-item menu-group1">
         <nuxt-link class="nl" to="/experience/skills">Skills </nuxt-link>
         <nuxt-link class="nl" to="/experience/work">& Expe</nuxt-link>
@@ -184,7 +188,7 @@
   .menu-item {
     @include fluid-font2($menu-item-min-screen, $menu-item-max-screen, $menu-item-min-size, $menu-item-max-size);
     display: inline-block;
-
+    /* margin: 0 10px; */
   }
 
 </style>
