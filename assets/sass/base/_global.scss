@@ -1,13 +1,10 @@
-
 .break::before {
   content: "\A";
   white-space: pre;
 }
 
 
-.page-container {
-
-}
+.page-container {}
 
 main {
   display: flex;
@@ -22,7 +19,7 @@ section.content {
 #arrow-wrapper {
   // width: 40px;
   // height: 100px;
-    top: 43vh;
+  top: 43vh;
 }
 
 body {
@@ -41,12 +38,11 @@ h2,
 h3,
 a,
 h2,
-div
- {
+div {
   color: $default-txt-color;
   letter-spacing: $letter-spacing;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -70,10 +66,11 @@ h2 {
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
+
 li {
   display: inline-block;
   margin: 0;
@@ -81,18 +78,18 @@ li {
 }
 
 a {
-    text-decoration: none;
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-    // list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  // list-style-type: none;
 }
 
 // ---------------------- Component styles ---------------------------
 
 .headline {
   font-weight: $h1-weight;
-  @include fluid-font2(400px, 1400px,  $h1-min-size, $h1-max-size);
+  @include fluid-font2(400px, 1400px, $h1-min-size, $h1-max-size);
   font-family: $h1-font;
   line-height: .8em;
   // background-color: grey;
@@ -103,7 +100,8 @@ a {
 }
 
 
-p, li {
+p,
+li {
   font-size: $p-font-size;
   font-weight: 300;
   line-height: 2em;
@@ -134,12 +132,9 @@ h2 {
 
 @media (max-height: $breakpoint-mobile-height) {
   #arrow-wrapper {
-    // display: none;
-    top: 60vh;
-  }
-  section.content {
-    // margin-top: 20px;
-    // background-color: #fff;
+    top: 50vh;
+    left: 38vw;
+    // top: 60vh;
   }
 }
 
@@ -147,18 +142,23 @@ h2 {
   main {
     flex-direction: column;
   }
+
   section.content {
     margin-top: 30px;
   }
-  
-  h2, li,p {
+
+  h2,
+  li,
+  p {
     line-height: 1.8em;
     font-size: 11px;
 
   }
+
   #arrow-wrapper {
-    display: none;
-    // top: 55vh;
+    // display: none;
+    top: 50vh !important;
+    left: 84vw !important;
   }
 }
 
@@ -170,14 +170,10 @@ h2 {
 //       section.content {
 //         margin-top: 50px;
 //       }
-      
+
 //       h2, li,p {
 //         line-height: 1.8em;
 //         font-size: 11px;
-    
+
 //       }
 // }
-
-
-
-

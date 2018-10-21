@@ -178,8 +178,4 @@
     display: inline-block;
   }
 
-
-  @media (max-height: $breakpoint-mobile-height) {
-
-  }
 </style>

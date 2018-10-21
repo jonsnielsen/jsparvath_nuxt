@@ -7,6 +7,7 @@
           .cls-1 {
             fill: #fff;
           }
+
         </style>
       </defs>
       <g id="Group_4" data-name="Group 4" transform="translate(-2793.409 -3527.958)">
@@ -24,7 +25,9 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+  import {
+    mapState
+  } from 'vuex'
 
   export default {
     data() {
@@ -35,13 +38,14 @@
       }
     },
     computed: {
-      ...mapState(['exitRoute', 'exitUp', 'exitDown', 'enterUp', 'enterDown', 'enterRoute', 'allPathsData', 'currentPathData', 'pathsLength'])
+      ...mapState(['exitRoute', 'exitUp', 'exitDown', 'enterUp', 'enterDown', 'enterRoute', 'allPathsData',
+        'currentPathData', 'pathsLength'
+      ])
     },
     mounted() {
       if (this.currentPathData.index === 0) {
         this.displayHead2 = 'none';
-      }
-      else if (this.currentPathData.index === this.pathsLength - 1) {
+      } else if (this.currentPathData.index === this.pathsLength - 1) {
         console.log(this.allPathsData.length)
         console.log('th')
         this.displayHead1 = 'none';
@@ -50,6 +54,7 @@
       console.log('th')
     }
   }
+
 </script>
 
 <style>
@@ -69,4 +74,5 @@
     overflow: hidden;
     height: 38px;
   }
+
 </style>

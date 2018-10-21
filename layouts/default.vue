@@ -9,7 +9,9 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+  import {
+    mapState
+  } from 'vuex'
   import Header from '~/components/header/Header.vue'
   import Footer from '~/components/footer/Footer.vue'
 
@@ -94,9 +96,4 @@
     }
   }
 
-  @media (max-height: $breakpoint-mobile-height2) {
-    #arrow-wrapper {
-      display: none;
-    }
-  }
 </style>
