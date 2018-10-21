@@ -1,4 +1,3 @@
-
 /* --------------- COLORS ------------------ */
 $fav-color: #ff0000;
 $default-txt-color: white;
@@ -12,13 +11,14 @@ $services-bc-color: #77cdff;
 $contact-bc-color: #000000;
 /* --------------- FONTS ------------------ */
 
-$headline-font: 'Poppins', serif;
+$headline-font: 'Poppins',
+serif;
 $body-font: $headline-font;
 
 $body-size: 10px;
 $letter-spacing: 1px;
 
-$h1-min-size: 55px;
+$h1-min-size: 60px;
 $h1-max-size: 110px;
 
 
@@ -27,7 +27,7 @@ $h1-font: $headline-font;
 
 // $h2-min-size: 15px;
 // $h2-max-size: 15px;
-$h2-font-size: $body-size; 
+$h2-font-size: $body-size;
 $h2-weight: 900;
 $h2-font: $body-font;
 
@@ -51,6 +51,8 @@ $footer-item-font-size: 0.5em;
 
 /* --------------- OTHER ----------------- */
 
-$breakpoint-mobile-height: 530px;
-$breakpoint-mobile-height2: 430px;
-$breakpoint-mobile: 660px;
+$breakpoint-mobile-height: 540px;
+// $breakpoint-mobile-height2: 430px;
+$breakpoint-mobile-width: 660px;
+$breakpoint-mobile-width2: 320px;
+$breakpoint-mobile-width3: 800px;

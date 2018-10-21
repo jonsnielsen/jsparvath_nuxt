@@ -44,11 +44,6 @@
 </script>
 
 <style lang="scss">
-  #header-wrapper {
-    padding: 8vh 0 26vh 0;
-    /* background-color: violet; */
-  }
-
   #layout-wrapper {
     max-width: 1200px;
     padding: 0 50px;
@@ -64,36 +59,6 @@
     /* background-color: blue; */
   }
 
-
-
-
-  @media (max-width: $breakpoint-mobile) {
-    #header-wrapper {
-      padding: 6vh 0 12vh 0 !important;
-    }
-
-    #footer {
-      /* margin: 0 auto; */
-      display: none;
-    }
-
-
-    #layout-wrapper {
-      padding: 0 10vw;
-      /* background-color: blue; */
-    }
-  }
-
-
-  @media (max-height: $breakpoint-mobile-height) {
-    #footer {
-      bottom: 20px;
-      /* display: none; */
-    }
-
-    #header-wrapper {
-      padding: 6vh 0 16vh 0;
-    }
-  }
+  @media (max-width: $breakpoint-mobile-width) {}
 
 </style>

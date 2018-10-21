@@ -60,14 +60,7 @@
 <style>
   #arrow {
     width: 4px;
-    /* width: 10px; */
     position: relative;
     top: 6px;
-    /* top: -30px; */
-    /* height: 100px; */
-    /* background-color: blue; */
-
   }
-
-
 </style>

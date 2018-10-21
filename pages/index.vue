@@ -33,6 +33,7 @@
     },
     mixins: [RouteTransition]
   }
+
 </script>
 
 <style scoped lang="scss">
@@ -41,7 +42,7 @@
   }
 
 
-  @media (max-width: $breakpoint-mobile) {
+  @media (max-width: $breakpoint-mobile-width) {
     br {
       display: none;
     }
@@ -50,4 +51,5 @@
       font-weight: 300;
     }
   }
+
 </style>

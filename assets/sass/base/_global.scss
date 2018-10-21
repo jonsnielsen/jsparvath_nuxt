@@ -132,14 +132,12 @@ h2 {
   font-weight: 500;
 }
 
-
-@media (max-height: $breakpoint-mobile-height) {
-  #arrow-wrapper {
-    display: none;
-  }
+#header-wrapper {
+  padding: 8vh 0 26vh 0;
+  /* background-color: violet; */
 }
 
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: $breakpoint-mobile-width) {
   main {
     flex-direction: column;
   }
@@ -157,7 +155,59 @@ h2 {
   }
 
   #arrow-wrapper {
-    top: 48vh;
+    top: calc(60vh - 15vw) !important;
     left: 0;
+  }
+
+  #header-wrapper {
+    padding: 6vh 0 (12vw) 0 !important;
+  }
+
+  //----------------- LAYOUT ----------------
+  #footer {
+    display: none;
+  }
+
+  #layout-wrapper {
+    padding: 0 10vw;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-width2) {
+  #arrow-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-width3) {}
+
+@media (max-height: $breakpoint-mobile-height) {
+  #footer {
+    bottom: 20px;
+  }
+}
+
+@media (max-height: $breakpoint-mobile-height),
+(max-width: $breakpoint-mobile-width3) {
+  #header-wrapper {
+    padding: 6vh 0 16vh 0;
+  }
+
+  #arrow-wrapper {
+    top: 54vh;
+  }
+}
+
+@media (max-height: 550px) and (min-width: $breakpoint-mobile-width) {
+  #arrow-wrapper {
+    display: none;
+  }
+}
+
+
+@media (max-width: $breakpoint-mobile-width) and (max-height: $breakpoint-mobile-height) {
+  #arrow-wrapper {
+    // background-color: blue;
+    display: none;
   }
 }
