@@ -8,7 +8,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'jsparvath - web developer',
     htmlAttrs: {
       lang: 'en',
     },
@@ -22,7 +22,7 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: pkg.description
+        content: 'Jonathan Spavath web developer based in Copenhagen'
       }
     ],
     link: [{
