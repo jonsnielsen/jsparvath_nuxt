@@ -69,10 +69,5 @@
 
   }
 
-  #arrow-wrapper {
-    position: absolute;
-    overflow: hidden;
-    height: 38px;
-  }
 
 </style>

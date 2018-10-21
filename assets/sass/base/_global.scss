@@ -12,13 +12,17 @@ main {
 }
 
 section.content {
-  // background-color: teal;
   position: relative;
+  // background-color: blue;
+
 }
 
 #arrow-wrapper {
   // width: 40px;
   // height: 100px;
+  position: absolute;
+  overflow: hidden;
+  height: 38px;
   top: 43vh;
 }
 
@@ -117,7 +121,6 @@ li {
 }
 
 .time-span {
-  // font-size: 10px;
   margin: 0 0 7px 0;
 }
 
@@ -132,9 +135,7 @@ h2 {
 
 @media (max-height: $breakpoint-mobile-height) {
   #arrow-wrapper {
-    top: 50vh;
-    left: 38vw;
-    // top: 60vh;
+    display: none;
   }
 }
 
@@ -150,30 +151,13 @@ h2 {
   h2,
   li,
   p {
-    line-height: 1.8em;
+    line-height: 1.6em;
     font-size: 11px;
 
   }
 
   #arrow-wrapper {
-    // display: none;
-    top: 50vh !important;
-    left: 84vw !important;
+    top: 48vh;
+    left: 0;
   }
 }
-
-
-// @media only screen and (orientation: portrait) {
-//   main {
-//         flex-direction: column;
-//       }
-//       section.content {
-//         margin-top: 50px;
-//       }
-
-//       h2, li,p {
-//         line-height: 1.8em;
-//         font-size: 11px;
-
-//       }
-// }
