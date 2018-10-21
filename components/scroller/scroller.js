@@ -9,17 +9,28 @@ function Handler(domElem, timeout) {
 }
 
 //-------------------------- TOUCH ----------------------
-let touchStart = 0;
+let touchStartY = 0;
+let touchStartX = 0;
 
 let touchEvent = function (domElem, callback) {
-  domElem.addEventListener("touchstart", () => touchStart = event.changedTouches[0].clientY, { passive: true });
+  domElem.addEventListener("touchstart", () => {
+    touchStartY = event.changedTouches[0].clientY;
+    touchStartX = event.changedTouches[0].clientX;
+  }, {
+    passive: true
+  });
   domElem.addEventListener("touchend", event => {
-    let direction = touchStart - event.changedTouches[0].clientY;
-    if (direction === 0) {
+    let directionY = touchStartY - event.changedTouches[0].clientY;
+    let directionX = touchStartX - event.changedTouches[0].clientX;
+    let direction = (Math.abs(directionY) > Math.abs(directionX)) ? directionY : directionX;
+    //if there has been scrolled very little, its probably a touch
+    if (direction > -3 && direction < 3) {
       return
     }
     callback(direction);
-  }, { passive: true });
+  }, {
+    passive: true
+  });
 };
 
 //-------------------------- WHEEL ---------------------------
@@ -33,7 +44,9 @@ let wheelEvent = function (domElem, timeout, callback) {
     if (timeDiff > timeout) {
       callback(e.deltaY);
     }
-  }, { passive: true })
+  }, {
+    passive: true
+  })
 }
 
 export default Handler;
