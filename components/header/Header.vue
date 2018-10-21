@@ -8,11 +8,12 @@
         </nuxt-link>
       </li>
 
-      <li class="menu-item">
-        <nuxt-link class="nl" to="/experience/skills">
-          Skills & Experience
-        </nuxt-link>
+      <li class="menu-item menu-group1">
+        <nuxt-link class="nl" to="/experience/skills">Skills </nuxt-link>
+        <nuxt-link class="nl" to="/experience/work">& Expe</nuxt-link>
+        <nuxt-link class="nl" to="/experience/studies">rience</nuxt-link>
       </li>
+
 
       <li class="menu-item">
         <nuxt-link class="nl" to="/contact">
@@ -28,7 +29,9 @@
 
 <script>
   import ProgressBar from './ProgressBar.vue'
-  import { mapState } from 'vuex';
+  import {
+    mapState
+  } from 'vuex';
 
   import Scroller from '../scroller/Scroller.vue'
 
@@ -42,6 +45,7 @@
     left -= padding
     return left
   };
+
   function prepareItemData(item, allPathsData) {
     let menuItemWidth = item.clientWidth;
     let offsetLeft = cumulativeOffset(item);
@@ -69,7 +73,10 @@
       return {
         menuItems: [],
         menuItemsData: [],
-        progressBarData: { width: '0px', left: '0px' }
+        progressBarData: {
+          width: '0px',
+          left: '0px'
+        }
       }
     },
     computed: {
@@ -99,8 +106,7 @@
             let pathData = this.allPathsData[path];
             if (pathData['position'] === 1) {
               basePath = path;
-            }
-            else if (currentPathObj.path === path) {
+            } else if (currentPathObj.path === path) {
               break;
             }
           }
@@ -150,6 +156,7 @@
       });
     }
   }
+
 </script>
 
 <style lang="scss" scoped>
@@ -168,14 +175,16 @@
   .nl {
     text-decoration: none;
     cursor: pointer;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 5px 0;
+    /* background-color: red; */
     list-style-type: none;
   }
 
   .menu-item {
     @include fluid-font2($menu-item-min-screen, $menu-item-max-screen, $menu-item-min-size, $menu-item-max-size);
     display: inline-block;
+
   }
 
 </style>
