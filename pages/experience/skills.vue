@@ -28,7 +28,7 @@
 
         <section class="item-group transition4 skills-item-group" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,  enter: enterRoute}">
           <h2>Back end:</h2>
-          <p>Node.js, Express.js, MongoDB, SQL, C#, Umbraco, F#</p>
+          <p>Node.js, Express.js, MongoDB, SQL, C#, Umbraco CMS, F#</p>
 
           <!-- <ul>
               <li>Node.js,&nbsp;</li>
