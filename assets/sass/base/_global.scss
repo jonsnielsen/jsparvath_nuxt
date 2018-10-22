@@ -50,7 +50,7 @@ div {
 
 h1 {
   display: inline;
-  min-width: 200px;
+  min-width: 300px;
   width: 37vw;
   padding-right: 50px;
   max-width: 600px;
@@ -190,15 +190,16 @@ h2 {
   }
 }
 
+@media (max-height: 550px) and (max-width: $breakpoint-mobile-width) {
+  #arrow-wrapper {
+    display: none;
+  }
+}
+
 @media (max-height: 550px) and (min-width: $breakpoint-mobile-width) {
   #arrow-wrapper {
     display: none;
   }
 }
 
-
-@media (max-width: $breakpoint-mobile-width) and (max-height: $breakpoint-mobile-height) {
-  #arrow-wrapper {
-    display: none;
-  }
-}
+@media (max-width: $breakpoint-mobile-width) and (max-height: $breakpoint-mobile-height) {}

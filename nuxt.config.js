@@ -23,7 +23,8 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content: 'Jonathan Spavath - developer based in Copenhagen'
-      }
+      },
+      {name: "google-site-verification", content: "YsPjIyloLmi1VaAgXmrG3_w25aXWbGCKBmLSJ-5q8po" }
     ],
     link: [{
         rel: 'icon',
