@@ -7,10 +7,10 @@
       <section class="content">
 
         <section class="item-group transition2 work-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">
-          <p class="time-span">08 / 2018 - present</p>
-          <h2>Freelance web developer, Danmarks Miljøportal (DMP)</h2>
+          <p class="time-span">07 / 2018 - present</p>
+          <h2>Freelance web developer</h2>
           <p class="greyed">
-            Implementing DMP's new website using HTML5, CSS & JavaScript on the front-end and Umbraco CMS on the
+           <span class="">Danmarks Miljøportal (DMP)</span> - HTML5, CSS & JavaScript on the front-end and Umbraco CMS on the
             back-end.
           </p>
         </section>
@@ -55,5 +55,9 @@
 
   h2 {
     font-size: 11px;
+  }
+
+  .italic {
+    font-style: italic;
   }
 </style>
