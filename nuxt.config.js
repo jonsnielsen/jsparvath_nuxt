@@ -1,39 +1,44 @@
-const pkg = require('./package')
-
+const pkg = require("./package");
 
 module.exports = {
-  mode: 'universal',
+  mode: "universal",
 
   /*
    ** Headers of the page
    */
   head: {
-    title: 'jsparvath - developer',
+    title: "jsparvath - developer",
     htmlAttrs: {
-      lang: 'en',
+      lang: "en"
     },
-    meta: [{
-        charset: 'utf-8'
+    meta: [
+      {
+        charset: "utf-8"
       },
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
       },
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Jonathan Spavath - developer based in Copenhagen'
+        hid: "description",
+        name: "description",
+        content: "Jonathan Spavath - developer based in Copenhagen"
       },
-      {name: "google-site-verification", content: "YsPjIyloLmi1VaAgXmrG3_w25aXWbGCKBmLSJ-5q8po" }
+      {
+        name: "google-site-verification",
+        content: "YsPjIyloLmi1VaAgXmrG3_w25aXWbGCKBmLSJ-5q8po"
+      }
     ],
-    link: [{
-        rel: 'icon',
-        type: 'image/png',
-        href: '/browser-logo.png'
+    link: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/browser-logo.png"
       },
       {
-        rel: 'stylesheet',
-        href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,900"
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,900"
       }
     ]
   },
@@ -46,22 +51,23 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [{
-    src: '~/assets/sass/main.scss',
-    lang: 'sass'
-  }],
+  css: [
+    {
+      src: "~/assets/sass/main.scss",
+      lang: "sass"
+    }
+  ],
 
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~/plugins/scroller-plugin',
     {
-      src: '~/plugins/polyfills.js',
+      src: "~/plugins/polyfills.js",
       ssr: false
     },
     {
-      src: '~plugins/ga.js',
+      src: "~plugins/ga.js",
       ssr: false
     }
   ],
@@ -70,12 +76,7 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-
-    [
-      'nuxt-sass-resources-loader', [
-        '~assets/sass/helpers/_1-helpers.scss'
-      ]
-    ]
+    ["nuxt-sass-resources-loader", ["~assets/sass/helpers/_1-helpers.scss"]]
   ],
 
   /*
@@ -83,12 +84,12 @@ module.exports = {
    */
   build: {
     postcss: [
-      require('autoprefixer')({
-        browsers: ['> 1%']
+      require("autoprefixer")({
+        browsers: ["> 1%"]
       })
     ]
   },
   router: {
-    middleware: 'pages'
+    middleware: "pages"
   }
-}
+};

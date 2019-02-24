@@ -1,3 +1,0 @@
-in scrolling, make 'sincelastscroll' variable so if the user scrolls and the page start to scroll, the variable gets set, and if the user consecutively
- scroll after he/she doesn't have to wait.
-IN LIGHT OF PREVIOUS: MAYBE!: make the 'change page on scroll' time last as long time as the first animation exits

@@ -5,20 +5,21 @@
   "author": "",
   "private": true,
   "scripts": {
-    "dev": "nuxt --hostname 192.168.1.50 --port 3000",
+    "dev": "nuxt --port 3001",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
+    "dotenv": "^6.2.0",
     "nuxt": "^1.0.0",
     "nuxt-sass-resources-loader": "^2.0.5"
   },
   "devDependencies": {
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "cross-env": "^5.0.1",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.11.0",
     "sass-loader": "^7.0.3"
   }
 }

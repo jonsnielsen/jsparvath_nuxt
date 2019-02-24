@@ -1,7 +1,7 @@
 import Vuex from 'vuex';
 import { log } from 'util';
 
-//position and numberOfRoutes are used in order to let the menubar know where it should be and the width
+//'position' and 'numberOfRoutes' are used in order to let the menubar know where it should be and the width
 //the order here DOES matter, so when scrolling it will take the NEXT/PREV one.
 const paths = {
   '/': { color: '#000000', numberOfRoutes: 1, position: 1 },
