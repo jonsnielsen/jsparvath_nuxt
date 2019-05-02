@@ -6,8 +6,8 @@
       <section class="content">
 
         <div class="item-group transition2" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">
-          <p class="time-span">2016 – 2018</p>
-          <h2>Software development</h2>
+          <p class="time-span">2016 – 2019</p>
+          <h2>Computer Science</h2>
           <p>IT-University, Copenhagen </p>
         </div>
 

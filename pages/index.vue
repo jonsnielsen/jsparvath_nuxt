@@ -7,14 +7,13 @@
       <section id="about-content" class="content">
 
         <p class=" transition2 item-group" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">
-          <span class="booold hello">Hello!</span> <br class="break">
-          I'm <span class="booold">Jonathan Sparvath</span> a full stack developer with emphasis on the back end, but I
-          absolutely love working on the front end as well!
-       
+          Hi! I'm <span class="booold">Jonathan Sparvath</span><br class="break">
+          I'm a full-stack developer with emphasis on <span class="booold">Front end</span>.
         </p>
+
         <p class="transition3 item-group" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">
-          I also have an interest in visual design that I exersize on my personal projects.
-          Most of my free time is spent learning the newest shiny technologies and when I’m not in front of a computer, I love to play ping-pong.
+          Most of my spare time is spent keeping up to date with the newest technologies within my field.  
+          Beyond coding, my biggest passions are coffee and ping-pong.
         </p>
         <Arrow></Arrow>
 
