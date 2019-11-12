@@ -1,29 +1,56 @@
 <template>
   <div class="page-container">
     <main>
-
-      <h1 class="headline transition1 " :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">Work</h1>
+      <h1
+        class="headline transition1 "
+        :class="{
+          exit: exitRoute,
+          exitUp: exitUp,
+          exitDown: exitDown,
+          enterUp: enterUp,
+          enterDown: enterDown,
+          enter: enterRoute
+        }"
+      >
+        Work
+      </h1>
 
       <section class="content">
-
-        <section class="item-group transition2 work-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">
-          <p class="time-span">07 / 2018 - present</p>
-          <h2>Freelance web developer</h2>
+        <section
+          class="item-group transition2 work-item-group"
+          :class="{
+            exit: exitRoute,
+            exitUp: exitUp,
+            exitDown: exitDown,
+            enterUp: enterUp,
+            enterDown: enterDown,
+            enter: enterRoute
+          }"
+        >
+          <p class="time-span">07 / 2018 - 08 / 2019</p>
+          <h2>Freelance Software Consultant, Moment</h2>
           <p class="greyed">
-           <span class="">Danmarks Miljøportal (DMP)</span> - HTML5, CSS & JavaScript on the front-end and Umbraco CMS on the
-            back-end.
+            <span class="">Danmarks Miljøportal (DMP)</span> - HTML5, CSS &
+            JavaScript on the front-end and Umbraco CMS on the back-end.
           </p>
         </section>
 
-        <section class="item-group transition3 work-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown, enter: enterRoute}">
+        <section
+          class="item-group transition3 work-item-group"
+          :class="{
+            exit: exitRoute,
+            exitUp: exitUp,
+            exitDown: exitDown,
+            enterUp: enterUp,
+            enterDown: enterDown,
+            enter: enterRoute
+          }"
+        >
           <p class="time-span">11 / 2017 - 04 / 2018</p>
-          <h2>Back-end consultant, Kraftvaerk</h2>
+          <h2>IT Consultant, Kraftvaerk</h2>
           <p class="greyed">
-            <!-- I primarily worked with C#/.NET and Umbraco as CMS, but also worked on things as: GDPR compliance, web
-            server configuration, automating tasks with code. -->
-
-            Back-end developer, working with C#/.NET and Umbraco CMS.
-            Other tasks include: GDPR compliance, web server configuration, and automating tasks with code
+            Full-stack developer, working primarily with C#/.NET and Umbraco CMS
+            on the back end, and HTML, CSS and JavaScript on the front end.
           </p>
         </section>
         <Arrow></Arrow>
@@ -33,31 +60,31 @@
 </template>
 
 <script>
-  import RouteTransition from '~/components/mixins/RouteTransitionMixin'
-  import Arrow from '~/components/Arrow';
-  export default {
-    components: {
-      Arrow
-    },
-    mixins: [RouteTransition]
-  }
+import RouteTransition from "~/components/mixins/RouteTransitionMixin";
+import Arrow from "~/components/Arrow";
+export default {
+  components: {
+    Arrow
+  },
+  mixins: [RouteTransition]
+};
 </script>
 
 <style lang="scss" scoped>
-  .work-item-group {
-    max-width: 40ch;
-  }
+.work-item-group {
+  max-width: 40ch;
+}
 
-  .greyed {
-    color: #dedede;
-    color: #fff;
-  }
+.greyed {
+  color: #dedede;
+  color: #fff;
+}
 
-  h2 {
-    font-size: 11px;
-  }
+h2 {
+  font-size: 11px;
+}
 
-  .italic {
-    font-style: italic;
-  }
+.italic {
+  font-style: italic;
+}
 </style>

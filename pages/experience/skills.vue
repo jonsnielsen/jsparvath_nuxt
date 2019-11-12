@@ -1,30 +1,81 @@
 <template>
   <div class="page-container">
     <main>
-      <h1 class="headline transition1" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">Skills
+      <h1
+        class="headline transition1"
+        :class="{
+          exit: exitRoute,
+          exitUp: exitUp,
+          exitDown: exitDown,
+          enterUp: enterUp,
+          enterDown: enterDown,
+          enter: enterRoute
+        }"
+      >
+        Skills
       </h1>
 
-
       <section class="content">
-
-        <p class="transition2 item-group skills-teaser" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">
-          Some of the tools and languages that I have previously worked with:
+        <p
+          class="transition2 item-group skills-teaser"
+          :class="{
+            exit: exitRoute,
+            exitUp: exitUp,
+            exitDown: exitDown,
+            enterUp: enterUp,
+            enterDown: enterDown,
+            enter: enterRoute
+          }"
+        >
+          Some of the tools and languages that I have worked with:
         </p>
 
-        <section class="item-group transition3 skills-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">
+        <section
+          class="item-group transition3 skills-item-group"
+          :class="{
+            exit: exitRoute,
+            exitUp: exitUp,
+            exitDown: exitDown,
+            enterUp: enterUp,
+            enterDown: enterDown,
+            enter: enterRoute
+          }"
+        >
           <h2>Front end:</h2>
-          <p>HTML5, CSS3, React.js, Nuxt.js, Vue.js, Sass</p>
+          <p>
+            SASS, React.js, Gatsby.js, Next.js, Styled Components, GraphQL,
+            Vue.js
+          </p>
         </section>
 
-        <section class="item-group transition4 skills-item-group" :class="{exit: exitRoute,  exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,  enter: enterRoute}">
+        <section
+          class="item-group transition4 skills-item-group"
+          :class="{
+            exit: exitRoute,
+            exitUp: exitUp,
+            exitDown: exitDown,
+            enterUp: enterUp,
+            enterDown: enterDown,
+            enter: enterRoute
+          }"
+        >
           <h2>Back end:</h2>
-          <p>Node.js, Graphql, Express.js, MongoDB, SQL, Umbraco CMS</p>
+          <p>Node.js, Express.js, Graphql, SQL, Apollo-Server</p>
         </section>
 
-
-        <section class="item-group transition5 skills-item-group" :class="{exit: exitRoute, exitUp: exitUp, exitDown: exitDown,  enterUp: enterUp, enterDown: enterDown,   enter: enterRoute}">
+        <section
+          class="item-group transition5 skills-item-group"
+          :class="{
+            exit: exitRoute,
+            exitUp: exitUp,
+            exitDown: exitDown,
+            enterUp: enterUp,
+            enterDown: enterDown,
+            enter: enterRoute
+          }"
+        >
           <h2>Tooling:</h2>
-          <p>Git, NPM, Webpack</p>
+          <p>Git, NPM, Webpack, Serverless (AWS Suite)</p>
 
           <!-- <ul>
               <li>Git,&nbsp;</li>
@@ -39,29 +90,27 @@
 </template>
 
 <script>
-  import RouteTransition from '~/components/mixins/RouteTransitionMixin'
-  import Arrow from '~/components/Arrow';
+import RouteTransition from "~/components/mixins/RouteTransitionMixin";
+import Arrow from "~/components/Arrow";
 
-  export default {
-    components: {
-      Arrow
-    },
-    mixins: [RouteTransition]
-  }
-
+export default {
+  components: {
+    Arrow
+  },
+  mixins: [RouteTransition]
+};
 </script>
 
 <style lang="scss" scoped>
-  .content {
-    max-width: 30ch;
-  }
+.content {
+  max-width: 30ch;
+}
 
-  .skills-teaser {
-    max-width: 35ch;
-  }
+.skills-teaser {
+  max-width: 35ch;
+}
 
-  .skills-item-group {
-    max-width: 20ch;
-  }
-
+.skills-item-group {
+  max-width: 20ch;
+}
 </style>
